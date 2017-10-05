@@ -90,7 +90,7 @@ To install it, simply run:
 
 ## Language guides
 
-Snapcraft is extremely flexible and can package any code. The following language guides are tailored for specific technologies and languages:
+Snapcraft is extremely flexible and can package any code. The following guides are tailored for specific technologies and languages:
 
 <div class="twelve-col">
   <ul class="inline-logos equal-height">
