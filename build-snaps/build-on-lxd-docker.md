@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Build on LXD or Docker"
+title: Build on LXD or Docker
 ---
 
 Snaps can be built inside containers, allowing you to build in a pristine environment or one tailored to your needs.
