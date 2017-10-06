@@ -1,29 +1,34 @@
 ---
+layout: base
 title: "Build on LXD or Docker"
 ---
 
+Snaps can be built inside containers, allowing you to build in a pristine environment or one tailored to your needs.
 
-In the near future, snapcraft will be offered as a snap, giving you the same experience regardless of Linux distribution or release. Until then, you can build snaps using LXD or Docker.
-
-The following instructions are targeted at Ubuntu 14.04, but you should be able to easily adapt them to your own use case.
-
-If you're already running Ubuntu 16.04 or later, you can skip this guide and [run snapcraft directly](/docs/build-snaps/your-first-snap).
-
-### LXD
+## LXD
 
 Using LXD, you'll map your home directory (or wherever your projects live) into the container, then build a snap from the current directory.
 
-First, install LXD:
+### On distributions that support running snaps
 
-       sudo snap install lxd
+First, install LXD and snapcraft:
 
-If your distribution is unable to run snaps, you can alternatively install the LXD debian pacakge:
-
-    sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
-    sudo apt update
-    sudo apt install lxd
+    sudo snap install lxd snapcraft
 
 Then, configure LXD:
+
+    sudo newgrp lxd
+    sudo lxd init
+
+The `lxd init` wizard will take you through configuration steps. You can keep the default suggestions.
+
+When this is done, you can use the `snapcraft cleanbuild` command on a snap project, to automatically build the snap inside a LXD container.
+
+### On other distributions
+
+If your distribution is unable to run snaps, you can install LXD through other packages formats [such as DEB, AUR, RPM, etc.](https://linuxcontainers.org/lxd/getting-started-cli/)
+
+Once this is done, configure LXD:
 
     sudo newgrp lxd
     sudo lxd init
@@ -43,7 +48,7 @@ You're all set. Any time you want to build a snap, type the following command to
 
     lxc exec snapcraft -- sh -c "cd $(pwd); snapcraft"
 
-### Docker
+## Docker
 
 Using Docker, you'll map the current directory into the container, then build a snap from that same directory.
 
