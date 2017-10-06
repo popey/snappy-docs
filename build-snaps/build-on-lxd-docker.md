@@ -17,7 +17,7 @@ First, install LXD:
 
        sudo snap install lxd
 
-If your distribution is unable to run snaps, you can alternatively install the debian LXD pacakge:
+If your distribution is unable to run snaps, you can alternatively install the LXD debian pacakge:
 
     sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
     sudo apt update
