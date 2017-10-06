@@ -1,12 +1,13 @@
 ---
-title: "Scriptlets"
+layout: base
+title: Scriptlets
 ---
 
 Scriptlets are shell scripts sourced directly from your `snapcraft.yaml`, to change the behaviour of a plugin.
 
 ## Overview
 
- * Scriptlets can be triggered before [the "build" step of a plugin](/docs/build-snaps/plugins), instead of it and after.
+ * Scriptlets can be triggered before [the "build" step of a plugin](/build-snaps/plugins), instead of it and after.
 
  * They are declared inside parts, using the following keywords: `prepare`, `build` and `install`.
 

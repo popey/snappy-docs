@@ -1,4 +1,5 @@
 ---
+layout: base
 title: The scons plugin
 ---
 

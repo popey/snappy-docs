@@ -1,0 +1,101 @@
+.banner {
+  background: $white;
+  max-width: $site-max-width;
+
+  .nav-toggle {
+    background-image: url('#{$asset-server}1fd83579-navigation-menu-black.svg');
+  }
+
+  .logo {
+    height: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .docs & {
+      margin-left: 20px;
+    }
+
+    @media only screen and (min-width: 1060px) {
+      margin-left: 0;
+    }
+    @media only screen and (min-width: $breakpoint-medium) {
+      height: 51px;
+    }
+
+    img {
+      height: 28px;
+      display: block;
+    }
+  }
+
+  .nav-primary {
+
+    ul {
+      float: right;
+
+      li {
+        @media only screen and (min-width: 620px) {
+          border-bottom: 3px solid transparent;
+
+          &.active {
+            border-bottom: 3px solid #e95420;
+          }
+
+          &:hover {
+            background-color: #e3e3e3 !important;
+          }
+        }
+
+        // sass-lint:disable nesting-depth
+        &:last-child {
+          border-right: 1px solid #e3e3e3;
+          border-left: 1px solid #e3e3e3;
+
+          .docs & {
+            border-right: 0;
+            padding-right: 0;
+          }
+        }
+
+        a {
+          border: 0;
+
+          &:link,
+          &:visited {
+            background-color: transparent;
+            border: 0;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          &.external,
+          &.external:link,
+          &.external:link:hover {
+            color: $cool-grey;
+            background-image: url('#{$asset-server}7d47725b-external-link.svg');
+            background-position: right 1rem top 1rem;
+            background-size: 7px 7px;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            padding-right: 2rem;
+          }
+
+          // sass-lint:enable nesting-depth
+        }
+      }
+    }
+
+    @media only screen and (min-width: calc($site-max-width + 2rem)) {
+      padding: 0;
+    }
+
+    .docs & {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}

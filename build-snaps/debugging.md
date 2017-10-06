@@ -1,7 +1,7 @@
 ---
-title: "Debugging"
+layout: base
+title: Debugging
 ---
-
 
 Snapd System specific debugging relates to determining whether a snap works correctly when confined and connected to its interfaces.
 

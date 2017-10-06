@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Install snapd on openSUSE
 ---
 
@@ -11,18 +12,18 @@ process for both is similar. First we need to add the repository itself.
 For 42.2:
 
 ```
-$ sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
+sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
 ```
 For Tumbleweed:
 
 ```
-$ sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Tumbleweed/ snappy
+sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Tumbleweed/ snappy
 ```
 
 You can then install snapd:
 
 ```
-$ sudo zypper install snapd
+sudo zypper install snapd
 ```
 
 Once the snapd package is successfully installed you have to
@@ -30,7 +31,7 @@ enable the systemd unit which takes care about snapd's main
 communication socket as this is not yet automatically done:
 
 ```
-$ sudo systemctl enable --now snapd.socket
+sudo systemctl enable --now snapd.socket
 ```
 
 Afterwards everything is setup to get you started with snaps.

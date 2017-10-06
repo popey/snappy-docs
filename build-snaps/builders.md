@@ -1,5 +1,6 @@
 ---
-title: "Builders"
+layout: base
+title: Builders
 ---
 
 ## During development
@@ -14,6 +15,6 @@ When you have a working snap, the next step is to use [build.snapcraft.io](https
 
 There are many ways to build a snap:
 
-* [Build in containers with LXD or Docker](/docs/build-snaps/build-on-lxd-docker)
-* [Build for another arch](/docs/build-snaps/build-for-another-arch)
-* [Integrate builds into your CI workflow](/docs/build-snaps/ci-integration)
+* [Build in containers with LXD or Docker](/build-snaps/build-on-lxd-docker)
+* [Build for another arch](/build-snaps/build-for-another-arch)
+* [Integrate builds into your CI workflow](/build-snaps/ci-integration)

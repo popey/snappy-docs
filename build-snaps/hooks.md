@@ -1,5 +1,6 @@
 ---
-title: "Hooks"
+layout: base
+title: Hooks
 ---
 
 There are a number of situations where snapd needs to notify a snap that something has happened. For example, when a snap is installed, or before it is removed, you may want to run a set of setup or clean up scripts. These types of situations are handled by hooks.
@@ -22,7 +23,7 @@ To create a hook:
 
 ### Confinement
 
-By default, hooks run under the same [confinement](/docs/reference/confinement) as the snap.
+By default, hooks run under the same [confinement](/reference/confinement) as the snap.
 
 You can grant them a different confinement by declaring your hooks and their plugs in the `snapcraft.yaml` file of the project, under a top-level `hooks` key, quite similar to the `apps` key.
 

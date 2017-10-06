@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Build your first snap
 ---
 
@@ -37,7 +38,7 @@ This is the only file needed in the directory. Snapcraft can use local source co
 
 Your first snap is going to be a very straightforward one. We are going to snap `GNU Hello`, an app that prints "Hello, world!" on the command line.
 
-Let's edit the `snapcraft.yaml` file. First, we need to set the [general metadata](/docs/build-snaps/syntax) for the snap:
+Let's edit the `snapcraft.yaml` file. First, we need to set the [general metadata](/build-snaps/syntax) for the snap:
 
 * its name
 * the version of GNU Hello we are going to snap
@@ -54,7 +55,7 @@ confinement: strict
 ```
 
 <br>
-Then, you need to declare [apps and commands](/docs/build-snaps/metadata) shipped in the snap. In this case, we have a single app (`hello`) with a single command (`hello`).
+Then, you need to declare [apps and commands](/build-snaps/metadata) shipped in the snap. In this case, we have a single app (`hello`) with a single command (`hello`).
 
 ```yaml
 apps:
@@ -63,7 +64,7 @@ apps:
 ```
 
 <br>
-Now, you need to tell snapcraft where to find the hello source code and how to build it. This is done with the `parts` keyword, which are [building blocks](/docs/build-snaps/parts) that compose your snap.
+Now, you need to tell snapcraft where to find the hello source code and how to build it. This is done with the `parts` keyword, which are [building blocks](/build-snaps/parts) that compose your snap.
 
 In this case, it's a single part, pulled from a remote tar.gz `source`, then built using the `autotools` plugin (which will run the usual autotools steps: `configure`, `make`, `make install`).
 

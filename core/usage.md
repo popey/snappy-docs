@@ -1,8 +1,9 @@
 ---
-title: "Use the snap command"
+layout: base
+title: Use the snap command
 ---
 
-This is an overview of commonly used snap commands. You can find the full command reference [here](/docs/reference/snap-command).
+This is an overview of commonly used snap commands. You can find the full command reference [here](/reference/snap-command).
 
 ## Log in to the Snap Store
 
@@ -74,7 +75,7 @@ Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name 
 
 When you're developing a snap, you will probably want to run it without the strict security confinement that is expected of stable, published snaps. This is done by using the `--devmode` flag on installation.
 
-You can even publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` [release channels](/docs/reference/channels). Users need to install these versions using the `--devmode` flag as well.
+You can even publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` [release channels](/reference/channels). Users need to install these versions using the `--devmode` flag as well.
 
     $ snap install flubber --beta
     error: cannot install "flubber": snap not found
@@ -97,4 +98,4 @@ To know the right channel and confinement mode to request when installing a pack
 
 ## Make your own snaps
 
-Snaps can be easily created with a helper tool called snapcraft. Jump to the [Build snaps](/docs/build-snaps) section to get started.
+Snaps can be easily created with a helper tool called snapcraft. Jump to the [Build snaps](/build-snaps) section to get started.

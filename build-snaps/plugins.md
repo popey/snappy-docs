@@ -1,10 +1,11 @@
 ---
+layout: base
 title: Plugins
 ---
 
 Plugins are pieces of Python code that tell Snapcraft how to build the content of a snap's parts. There are a variety of plugins already included with snapcraft. You can find the current list from `$ snapcraft list-plugins`, and you should find plugins covering Python 2 and 3, Go, Java, cmake- and autotools-based projects, and more. These supplied plugins will usually be adequate for building most snaps.
 
-See the [Plugins reference](/docs/reference/plugins) for the full list of implemented ones.
+See the [Plugins reference](/reference/plugins) for the full list of implemented ones.
 
 ## Lifecycle
 

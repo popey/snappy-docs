@@ -1,5 +1,6 @@
 ---
-title: "Snapcraft plugins reference"
+layout: base
+title: Snapcraft plugins reference
 ---
 
 This section references all the available snapcraft plugins to build your parts.
@@ -10,26 +11,26 @@ Note that you can run `$ snapcraft help <plugin>` to access the following docume
 
 ## General topics
 
-*   [Common keywords](/docs/reference/plugins/common)
-*   [Common 'source' options](/docs/reference/plugins/source)
+*   [Common keywords](/reference/plugins/common)
+*   [Common 'source' options](/reference/plugins/source)
 
 ## Build systems
 
-[kbuild](/docs/reference/plugins/kbuild), [make](/docs/reference/plugins/make), [qmake](/docs/reference/plugins/qmake), [autotools](/docs/reference/plugins/autotools), [cmake](/docs/reference/plugins/cmake), [scons](/docs/reference/plugins/scons), [meson](/docs/reference/plugins/meson), [waf](/docs/reference/plugins/waf)
+[kbuild](/reference/plugins/kbuild), [make](/reference/plugins/make), [qmake](/reference/plugins/qmake), [autotools](/reference/plugins/autotools), [cmake](/reference/plugins/cmake), [scons](/reference/plugins/scons), [meson](/reference/plugins/meson), [waf](/reference/plugins/waf)
 
 ## Languages
 
-*   Java: [ant](/docs/reference/plugins/ant), [gradle](/docs/reference/plugins/gradle), [maven](/docs/reference/plugins/maven)
-*   Python: [python](/docs/reference/plugins/python), [python2](/docs/reference/plugins/python2), [python3](/docs/reference/plugins/python3)
-*   Node: [gulp](/docs/reference/plugins/gulp), [nodejs](/docs/reference/plugins/nodejs)
-*   Go: [go](/docs/reference/plugins/go), [godeps](/docs/reference/plugins/godeps)
-*   Rust: [rust](/docs/reference/plugins/rust)
+*   Java: [ant](/reference/plugins/ant), [gradle](/reference/plugins/gradle), [maven](/reference/plugins/maven)
+*   Python: [python](/reference/plugins/python), [python2](/reference/plugins/python2), [python3](/reference/plugins/python3)
+*   Node: [gulp](/reference/plugins/gulp), [nodejs](/reference/plugins/nodejs)
+*   Go: [go](/reference/plugins/go), [godeps](/reference/plugins/godeps)
+*   Rust: [rust](/reference/plugins/rust)
 
 ## Projects
 
-*   ROS: [catkin](/docs/reference/plugins/catkin)
-*   Linux: [kernel](/docs/reference/plugins/kernel)
+*   ROS: [catkin](/reference/plugins/catkin)
+*   Linux: [kernel](/reference/plugins/kernel)
 
 ## Utilities
 
-[nil](/docs/reference/plugins/nil), [dump](/docs/reference/plugins/dump)
+[nil](/reference/plugins/nil), [dump](/reference/plugins/dump)

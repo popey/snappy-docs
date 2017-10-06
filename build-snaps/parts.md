@@ -1,7 +1,7 @@
 ---
-title: "Parts"
+layout: base
+title: Parts
 ---
-
 
 Parts are reusable components that are the main building blocks used to create snaps using Snapcraft. Parts have their own private space and lifecycle. Each part uses a plugin, which tells the part how to behave and what to do with the information inside it. Parts are analogous to a library that you would call in your program. There are three types of parts:
 
@@ -42,7 +42,7 @@ The snapcraft.yaml `parts` key defines a map of the parts you want to include in
 
 Key | Type | Purpose
 :----- | :---- | :-----
-`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three ways in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/docs/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
+`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three ways in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `stage-packages` | (list of strings) | A list of Ubuntu packages to use that are needed to support the part creation.
 `filesets` | (yaml subsection) | A dictionary with filesets, the key being a recognizable user defined string and its value a list of strings of files to be included or excluded. Globbing is achieved with `*` for either inclusions or exclusion. Exclusions are denoted by a `-`. Globbing is computed from the private sections of the part.
@@ -52,7 +52,7 @@ Key | Type | Purpose
 
 You can define your parts in any order, `after` takes care of any required build order.
 
-Usage examples for these sub-keys are available in the [common keywords](/docs/reference/plugins/common) reference documentation.
+Usage examples for these sub-keys are available in the [common keywords](/reference/plugins/common) reference documentation.
 
 ## Working with Snapcraft parts
 
@@ -86,7 +86,7 @@ An example integrating all these concepts for a part called `example-part` using
 
 In this example
 
-* the [`nil`](/docs/reference/plugins/nil) plugin makes use of `stage-packages`, these packages are fetched from the Ubuntu deb archive using the release (eg. 16.04) that is being used on the host. In this case, the part will be enhanced by the `gpg` and `wget` deb packages and its necessary dependencies to work isolated inside the part.
+* the [`nil`](/reference/plugins/nil) plugin makes use of `stage-packages`, these packages are fetched from the Ubuntu deb archive using the release (eg. 16.04) that is being used on the host. In this case, the part will be enhanced by the `gpg` and `wget` deb packages and its necessary dependencies to work isolated inside the part.
 
 * when reaching the stage phase, the components in the part’s install directory will be exposed there, but since the `organize` key is being used, the contents in the install directory will be exposed to other parts in a cleaner form if desired or required; it is important to notice that when using `filesets` they will follow the organized files and not the initial layout.
 
@@ -122,7 +122,7 @@ The proper **PYTHONPATH** environment variable will also be set in the wrapper s
 
 Python parts support standard Snapcraft options and the requirements option to point PIP at its requirements file.
 
-For details, see the complete reference and real-world examples of the [`python`](/docs/reference/plugins/python) plugin.
+For details, see the complete reference and real-world examples of the [`python`](/reference/plugins/python) plugin.
 
 ### Embedding a Python runtime
 
@@ -147,4 +147,4 @@ An Ant part works similarly, except it runs ant and sets the proper **CLASSPATH*
 
 If you only need to embed a Java runtime, add a part with the `jdk` type. This will pull a relocatable OpenJDK via the default-jdk Ubuntu package and will set the proper **JAVA_HOME** and **PATH** environment variables in wrapper scripts generated by Snapcraft or when running the app locally.
 
-For details, see the complete reference and real-world examples of the [`maven`](/docs/reference/plugins/maven) and [`ant`](/docs/reference/plugins/ant) plugins.
+For details, see the complete reference and real-world examples of the [`maven`](/reference/plugins/maven) and [`ant`](/reference/plugins/ant) plugins.

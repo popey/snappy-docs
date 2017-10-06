@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Install snapd on Solus
 ---
 
@@ -14,14 +15,14 @@ Solus includes snapd by default starting with the Solus 3 release. No installati
 Ensure your packages are up to date and install the snapd package with:
 
 ```
-$ sudo eopkg up
-$ sudo eopkg install snapd
+sudo eopkg up
+sudo eopkg install snapd
 ```
 
 Then reboot to ensure AppArmor and snapd are initialized:
 
 ```
-$ sudo reboot
+sudo reboot
 ```
 
 Now everything is set up to get you started with snaps.

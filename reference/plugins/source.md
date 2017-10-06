@@ -1,6 +1,6 @@
-
 ---
-title: "Common source options"
+layout: base
+title: Common source options
 ---
 
 Unless the part plugin overrides this behaviour, a part can use these

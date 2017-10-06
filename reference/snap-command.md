@@ -1,5 +1,6 @@
 ---
-title: "snap: command reference"
+layout: base
+title: 'snap: command reference'
 ---
 
 * `help`: Shows the help content

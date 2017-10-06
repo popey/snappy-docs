@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Snap stores
 ---
 
@@ -18,13 +19,13 @@ You can release a snap under any name you have rights to. Names can be registere
 
 ### Pushing
 
-Pushing to the Snap Store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
+Pushing to the Snap Store can be done directly with the [`snapcraft push`](/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
 
 It's worth noting that when you push a snap, the Snap Store assigns it a revision number of 1\. The Snap Store then automatically increments this revision number each time you push a new version.
 
 ### Releasing
 
-After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive [interfaces](/docs/core/interfaces), it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/).
+After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive [interfaces](/core/interfaces), it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/).
 
 Once your snap has been reviewed and approved, you can release it when you're ready, instantly making the snap available to users.
 
@@ -47,10 +48,6 @@ And a snap can be refreshed from a different channel from the one it was origina
 
 This switches the snap to using this channel for future updates.
 
-## Other stores
+## Brand stores
 
-Snaps are not tied to a specific type of store and you can host them any way you want.
-
-You can find an example implementation of a custom store [here](https://github.com/noise/snapstore/). You can even deploy it locally by running `$ snap install snapstore-example`. See the README of the project for details.
-
-Brands can also take advantage of a [Brand store](https://docs.ubuntu.com/core/en/build-store/index), a white label store offering similar to the Snap Store.
+Brands can also take advantage of white label [brand stores](https://docs.ubuntu.com/core/en/build-store/index), which are branded extensions to the Snap store. Note that this is a commercial offering aimed at companies.

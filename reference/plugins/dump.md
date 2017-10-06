@@ -1,4 +1,5 @@
 ---
+layout: base
 title: The dump plugin
 ---
 
@@ -8,7 +9,7 @@ In the cases where dumping the content needs some mangling or organizing
 one would take advantage of the core functionalities available to plugins
 such as: `filesets`, `stage`, `snap` and `organize`.
 
-See [common keywords](/docs/reference/plugins/common) for more information about these keywords.
+See [common keywords](/reference/plugins/common) for more information about these keywords.
 
 ## Example
 

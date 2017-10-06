@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Install snapd on OpenWrt
 ---
 

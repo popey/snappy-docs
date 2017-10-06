@@ -1,5 +1,6 @@
 ---
-title: "Build and publish snaps from Git"
+layout: base
+title: Build and publish snaps from Git
 ---
 
 You can build and publish snaps of commits to your Git repository so that other developers or early adopters can try the latest changes to your application.
@@ -56,6 +57,6 @@ Finally, tell Launchpad to build and publish snaps for this repository:
 1. Under "Store channels" select "Edge"
 1. Click "Create snap package"
 
-Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your GitHub repository and will both build and publish snaps of them to the [edge channel](/docs/reference/channels).
+Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your GitHub repository and will both build and publish snaps of them to the [edge channel](/reference/channels).
 
 Your system can then automatically refresh this snap to the latest version, up to four times a day. To set that up, run `snap install --edge <snap name>`.

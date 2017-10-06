@@ -1,7 +1,7 @@
 ---
-title: "The snapcraft syntax"
+layout: base
+title: The snapcraft syntax
 ---
-
 
 The `snapcraft.yaml` file is the main entry point to create a snap through
 Snapcraft. The main building blocks are parts and each defined part is
@@ -27,7 +27,7 @@ The following keys are used to declare the general metadata of your snap: how it
 * `type` (string)
   The type of snap. Valid values are `app`, `core`, `gadget` and `kernel`. Defaults to `app`.
 * `confinement` (string)
-  The type of confinement supported by the snap. Can be "strict" , "devmode" or "classic". See [Confinement](/docs/reference/confinement) for details.
+  The type of confinement supported by the snap. Can be "strict" , "devmode" or "classic". See [Confinement](/reference/confinement) for details.
 * `icon` (string)
   Path to the icon that will be used for the snap.
 * `grade` (string)
@@ -45,18 +45,18 @@ The following keys are used to declare the general metadata of your snap: how it
 
 ### Apps and commands
 
-Snaps can ship multiple applications and commands. The following keys allow you to declare them, making them available to users once the snap is installed. The [commands, daemons and assets section](/docs/build-snaps/metadata) contains examples of commands and daemons declarations.
+Snaps can ship multiple applications and commands. The following keys allow you to declare them, making them available to users once the snap is installed. The [commands, daemons and assets section](/build-snaps/metadata) contains examples of commands and daemons declarations.
 
 * `apps` (yaml subsection)
   A map of keys for applications names. These are either daemons or command line
-  accessible binaries. See [Declaring app commands](/docs/build-snaps/metadata#declaring-app-commands) for examples.
+  accessible binaries. See [Declaring app commands](/build-snaps/metadata#declaring-app-commands) for examples.
     * `command` (string)
       Specifies the internal command to expose. If it is a `daemon` this
       command is used to start the service.
     * `plugs` (list of strings)
-      The list of interfaces the app should have access to. See [Interfaces](/docs/core/interfaces) for details on plugs and the [list of available interfaces](/docs/reference/interfaces).
+      The list of interfaces the app should have access to. See [Interfaces](/core/interfaces) for details on plugs and the [list of available interfaces](/reference/interfaces).
     * `desktop` (string)
-       Path to the desktop file, see [Commands, daemons & assets](/docs/build-snaps/metadata#fixed-assets) for details.  
+       Path to the desktop file, see [Commands, daemons & assets](/build-snaps/metadata#fixed-assets) for details.  
     * `daemon` (string)
       If present, integrates the runnable as a system service. Valid values are
       `forking`, `oneshot`, `notify` and `simple`.
@@ -85,14 +85,14 @@ Snaps can ship multiple applications and commands. The following keys allow you 
     * `restart-condition` (string)
       Condition to restart the daemon under. Valid values are `on-failure`, `on-success`, `on-abnormal`, `on-abort`, `always` and `never`. Defaults to `on-failure`. See the [systemd.service manual](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Restart=) on `Restart` for details.
     * `listen-stream` (string)
-      Optional stream abstract socket name or socket path. Valid formats are: `<path>`, `@<snap name>` or `@<snap name>_<suffix>`. When defined as a path, it should normally be in one of the snap [writable directories](/docs/reference/confinement). For an abstract socket it must start with `@<snap name>` or `@<snap name>_`.
+      Optional stream abstract socket name or socket path. Valid formats are: `<path>`, `@<snap name>` or `@<snap name>_<suffix>`. When defined as a path, it should normally be in one of the snap [writable directories](/reference/confinement). For an abstract socket it must start with `@<snap name>` or `@<snap name>_`.
     * `socket` (bool)
       Whether the daemon is socket activated. Defaults to `false`, and must be defined together with `listen-stream` if `true`.
 
 ### Parts
 
 Parts are the main building blocks of snaps: source code, packages, tarballs or organizational steps that are used to create your snap content. Check out the
-[parts section](/docs/build-snaps/parts) for concrete examples.
+[parts section](/build-snaps/parts) for concrete examples.
 
 * `parts` (yaml subsection)
   A map of part names to their own part configuration. Order in the file is

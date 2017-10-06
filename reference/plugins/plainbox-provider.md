@@ -1,8 +1,9 @@
 ---
+layout: base
 title: The plainbox-provider plugin
 ---
 
- Create parts containing a Plainbox test collection known as a provider.
+Create parts containing a Plainbox test collection known as a provider.
 
 Plainbox is a toolkit consisting of python3 library, development tools,
 documentation and examples. It is targeted at developers working on testing or

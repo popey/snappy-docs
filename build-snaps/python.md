@@ -1,7 +1,8 @@
 ---
+layout: base
 title: Python
 ---
- 
+
 Python has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `pip`, `setup.py` and `requirements.txt` to create snaps for people to install on Linux. 
  
 ## What problems do snaps solve for Python applications?
@@ -97,7 +98,7 @@ If your application is intended to run as a service, add the line `daemon: simpl
  
 ### Building the snap
  
-You’ll first need to [install snap support](https://snapcraft.io/docs/core/install), and then install the snapcraft tool:
+You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
 sudo snap install --beta --classic snapcraft
 ```
@@ -250,7 +251,7 @@ snapcraft help python
 
 ### Extending and overriding behaviour
  
-You can [extend the behaviour](/docs/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
+You can [extend the behaviour](/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
  
 Using the youtube-dl example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
  

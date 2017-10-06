@@ -1,5 +1,6 @@
 ---
-title: "Build on a remote LXD"
+layout: base
+title: Build on a remote LXD
 ---
 
 Snapcraft can build snaps on local and remote LXD containers. Building remotely allows developers to leverage the resources of another host, saving disk space, CPU usage and battery life on their local development laptop.

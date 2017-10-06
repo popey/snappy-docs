@@ -1,5 +1,6 @@
 ---
-title: "Snapping philosophy"
+layout: base
+title: Snapping philosophy
 ---
 
 You are new to this world of snaps and want to know what is different from traditional packaging? How to architect your

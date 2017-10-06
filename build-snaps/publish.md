@@ -1,9 +1,9 @@
 ---
-title: "Publish your snap"
+layout: base
+title: Publish your snap
 ---
 
-
-You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/docs/core/store).
+You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/core/store).
 
 ## 1. Create a Snap Store account
 

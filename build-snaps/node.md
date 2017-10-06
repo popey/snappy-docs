@@ -1,10 +1,11 @@
 ---
+layout: base
 title: Node
 ---
 
 <iframe height="450" src="https://www.youtube.com/embed/S3YvRALc2C0?rel=0&showinfo=0" allowfullscreen></iframe>
 
-Node has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `npm` and `yarn` to create snaps. 
+Node has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `npm` and `yarn` to create snaps.
 
 ## What problems do snaps solve for Node applications?
 
@@ -92,7 +93,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`wethr.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
+If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
@@ -104,7 +105,7 @@ If your application is intended to run as a service you simply add the line `dae
 
 ### Building the snap
 
-You’ll first need to [install snap support](https://snapcraft.io/docs/core/install), and then install the snapcraft tool:
+You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
 sudo snap install --beta --classic snapcraft
 ```
@@ -196,7 +197,7 @@ snapcraft help nodejs
 
 ### Extending and overriding behaviour
 
-You can [extend the behaviour](/docs/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
+You can [extend the behaviour](/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
 
 Using the wethr example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
 

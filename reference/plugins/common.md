@@ -1,5 +1,6 @@
 ---
-title: "Common keywords"
+layout: base
+title: Common keywords
 ---
 
 There are several builtin keywords which can be used in any part regardless
@@ -99,7 +100,7 @@ of the choice of plugin.
           - -usr/lib/libtest.so   # Excludng libtest.so
           - $manpages                 # Including the 'manpages' fileset
 
-  - `snap`: YAML file and fileset list
+  - `prime`: YAML file and fileset list
 
     A list of files from a part install directory to copy into `prime/`.
     This section takes exactly the same form as the 'stage' section  but the

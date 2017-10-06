@@ -1,5 +1,6 @@
 ---
-title: "The snap format"
+layout: base
+title: The snap format
 ---
 
 <!--- These entries need two spaces at the end of line to be properly formatted. -->
@@ -136,7 +137,7 @@ apps:
 
 Interfaces allow snaps to communicate or share resources according to the
 protocol established by the interface and play an important part in security
-policy configuration. See [Interfaces](/docs/core/interfaces) for details.
+policy configuration. See [Interfaces](/core/interfaces) for details.
 
 
 ## Desktop files

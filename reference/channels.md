@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Channels
 ---
 
@@ -67,7 +68,7 @@ Make sure you follow these guidelines, as they have an impact on the [discoverab
 
 ### Risk level restrictions: confinement and grade
 
-In your [`snapcraft.yaml`](/docs/build-snaps/syntax), you can declare the development status of your snap with the `grade` keyword and its confinement policy with the `confinement` one.
+In your [`snapcraft.yaml`](/build-snaps/syntax), you can declare the development status of your snap with the `grade` keyword and its confinement policy with the `confinement` one.
 
 Depending on these, your snap can be restricted to certain levels.
 

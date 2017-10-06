@@ -1,4 +1,5 @@
 ---
+layout: base
 title: The python3 plugin (deprecated)
 ---
 

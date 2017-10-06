@@ -1,10 +1,10 @@
 ---
-title: "Commands, daemons & assets"
+layout: base
+title: Commands, daemons & assets
 ---
 
-
 The entire syntax of a `snapcraft.yaml` with all available keys can be
-reviewed in the [snapcraft.yaml syntax section](/docs/build-snaps/syntax). Here we will
+reviewed in the [snapcraft.yaml syntax section](/build-snaps/syntax). Here we will
 discuss the apps metadata in more detail.
 
 ## Declaring app commands
@@ -60,7 +60,7 @@ complete and all communication channels are set up. The child continues to
 run as the main daemon process. This is the behavior of traditional UNIX
 daemons.
 
-The `daemon` key values follow systemd service types (`forking`, `oneshot`, `notify` and `simple`). See the [apps and commands syntax](/docs/build-snaps/syntax#apps-and-commands) for details on these types.
+The `daemon` key values follow systemd service types (`forking`, `oneshot`, `notify` and `simple`). See the [apps and commands syntax](/build-snaps/syntax#apps-and-commands) for details on these types.
 
 ### Stopping daemons
 
@@ -77,7 +77,7 @@ apps:
 
 In this example, when snapd needs to stop `daemon1` (eg. if the user disables or removes the snap), `bin/app1-stop` will be executed.
 
-See the [apps and commands syntax](/docs/build-snaps/syntax#apps-and-commands) for details on how to automatically restart a daemon.
+See the [apps and commands syntax](/build-snaps/syntax#apps-and-commands) for details on how to automatically restart a daemon.
 
 ### Tutorial
 

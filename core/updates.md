@@ -1,5 +1,6 @@
 ---
-title: "Transactional updates"
+layout: base
+title: Transactional updates
 ---
 
 Snapd systems employ a method of transactional updates that is available for all snaps: application, gadget, OS, and kernel.

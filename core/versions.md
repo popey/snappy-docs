@@ -1,7 +1,7 @@
 ---
-title: "Multiple versions of snaps & garbage collection"
+layout: base
+title: Multiple versions of snaps & garbage collection
 ---
-
 
 As a snap package is updated, the old version is kept. This enables a snapd system to rollback to an old, known to be good version of a snap if issues are detected in the updated snap. These old copies take up disk space, so garbage collection is performed automatically to ensure they don’t take up too much space, while preserving the ability to rollback snaps.
 

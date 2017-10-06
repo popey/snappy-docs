@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Install snapd
 ---
 
@@ -12,6 +13,8 @@ instructions for each of these distributions.
  * [Debian](install-debian)
  * [Fedora](install-fedora)
  * [Gentoo](install-gentoo)
+ * [Linux Mint](install-linux-mint)
+ * [Manjaro](install-manjaro)
  * [OpenEmbedded/Yocto](install-oe-yocto)
  * [openSUSE](install-opensuse)
  * [OpenWrt](install-openwrt)
@@ -30,10 +33,10 @@ listed distributions.
 | Debian (testing)    | Supported   | 2.21    | _devmode_               |
 | Debian (unstable)   | Supported   | 2.21    | _devmode_               |
 | Fedora 24           | End of Life | 2.26.3  | _devmode_, _no-classic_ |
-| Fedora 25           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
-| Fedora 26           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
-| Fedora 27           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
-| Fedora Rawhide      | Supported   | 2.27.2  | _devmode_, _no-classic_ |
+| Fedora 25           | Supported   | 2.27.6  | _devmode_, _no-classic_ |
+| Fedora 26           | Supported   | 2.27.6  | _devmode_, _no-classic_ |
+| Fedora 27           | Supported   | 2.27.6  | _devmode_, _no-classic_ |
+| Fedora Rawhide      | Supported   | 2.27.6  | _devmode_, _no-classic_ |
 | CentOS 7            | In progress | N/A     | _devmode_, _no-classic_ |
 | RHEL 7.3            | Unsupported | N/A     | N/A                     |
 | Arch Linux          | Outdated    | 2.21    | _devmode_, _no-classic_ |
@@ -43,7 +46,7 @@ listed distributions.
 | Yocto               | Unsupported | 2.23.5  | _devmode_               |
 
 _devmode_: confinement technology is not fully supported and all snaps are
-installed in [development mode](/docs/reference/confinement).
+installed in [development mode](/reference/confinement).
 
 _no-classic_: because of distribution policy to remove the `/snap` directory, snaps
-using [classic confinement](/docs/reference/confinement) are not supported.
+using [classic confinement](/reference/confinement) are not supported.
