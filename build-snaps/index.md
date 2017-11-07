@@ -15,8 +15,6 @@ To install it, simply run:
 
 ## 2. What language/framework are you using?
 
-Snapcraft is extremely flexible and can package any code. The following guides are tailored for specific technologies and languages:
-
 <div class="seven-col">
   <ul class="inline-logos equal-height">
     <li class="inline-logos__item box">
