@@ -20,6 +20,9 @@ Create snaps from your preferred programming language.
       <a href="/build-snaps/python"><img class="inline-logos__image" src="{{ site.asset_path }}c3d9d13f-python-logo.png" alt="Python" /><br />Python</a>
     </li>
     <li class="inline-logos__item box">
+      <a href="/build-snaps/ruby"><img class="inline-logos__image" src="{{ site.asset_path }}e6bb225e-ruby-logo.png" alt="Ruby" /><br />Ruby</a>
+    </li>
+    <li class="inline-logos__item box">
       <a href="/build-snaps/moos"><img class="inline-logos__image" src="{{ site.asset_path }}04ff3e39-MOOSV-10-256.jpg" alt="MOOS" /><br />MOOS</a>
     </li>
     <li class="inline-logos__item box">
