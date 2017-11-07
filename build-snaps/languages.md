@@ -22,5 +22,8 @@ Create snaps from your preferred programming language.
     <li class="inline-logos__item box">
       <a href="/build-snaps/moos"><img class="inline-logos__image" src="{{ site.asset_path }}04ff3e39-MOOSV-10-256.jpg" alt="MOOS" /><br />MOOS</a>
     </li>
+    <li class="inline-logos__item box">
+      <a href="/build-snaps/ros"><img class="inline-logos__image" src="{{ site.asset_path }}dc84f68e-c8749268-logo-ros.png" alt="ROS" /><br />ROS</a>
+    </li>
   </ul>
 </div>

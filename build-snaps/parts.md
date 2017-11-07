@@ -22,7 +22,7 @@ Parts are reusable components that are the main building blocks used to create s
            plugin: autotools
             source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
 
-- Parts built and shared by others through the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts). For example, using a part for `curl` defined in this repository:
+- Parts built and shared by others through the [parts repository](https://wiki.ubuntu.com/snapcraft/parts). For example, using a part for `curl` defined in this repository:
 
         parts:
             client:
@@ -32,9 +32,9 @@ Parts are reusable components that are the main building blocks used to create s
 
 **Tips**
 
-* Run `snapcraft update` to keep your parts list synchronized with the remote parts repository
-* Run `snapcraft search` to list all remote parts
-* Run `snapcraft define PART` to show a remote part, including help for the part
+* Run `snapcraft update` to keep your shared parts list synchronized with the parts repository
+* Run `snapcraft search` to list all parts from the repository
+* Run `snapcraft define PART` to show a shared part, including help for the part
 
 ## Defining parts in snapcraft.yaml
 
@@ -42,8 +42,8 @@ The snapcraft.yaml `parts` key defines a map of the parts you want to include in
 
 Key | Type | Purpose
 :----- | :---- | :-----
-`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three ways in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
-`after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
+`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three ways in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [parts repository](https://wiki.ubuntu.com/snapcraft/parts).
+`after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `stage-packages` | (list of strings) | A list of Ubuntu packages to use that are needed to support the part creation.
 `filesets` | (yaml subsection) | A dictionary with filesets, the key being a recognizable user defined string and its value a list of strings of files to be included or excluded. Globbing is achieved with `*` for either inclusions or exclusion. Exclusions are denoted by a `-`. Globbing is computed from the private sections of the part.
 `organize` | (yaml subsection) | A dictionary exposing replacements. The key is the internal name while the value the exposed (replacement) name (for example, `source_name: map_name`). **Note**: `filesets` refer to the exposed names of files, after the organization has been applied.

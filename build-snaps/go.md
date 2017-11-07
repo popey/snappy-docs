@@ -7,7 +7,7 @@ Snapcraft builds on top of the `go` tool, familiar to any Go developer, to creat
 
 ## What problems do snaps solve for Go applications?
 
-Often Linux install documentation for Go applications consists of downloading pre-built binaries (or running `go get`). When distributed this way, getting updates is an exercise left to the reader. With snapcraft it’s just one command to produce a bundle that works anywhere and can be automatically updated. 
+Often Linux install documentation for Go applications consists of downloading pre-built binaries (or running `go get`). When distributed this way, getting updates is an exercise left to the reader. With snapcraft it’s just one command to produce a bundle that works anywhere and can be automatically updated.
 Here are some snap advantages that will benefit many Go projects:
 
  * Simplify installation instructions, regardless of distribution, to `snap install mygoapp`.
@@ -29,16 +29,16 @@ version: git
 summary: An interactive web server.
 description: |
   HTTPLab let you inspect HTTP requests and forge responses.
- 
+
 grade: devel
 confinement: devmode
- 
+
 parts:
   httplab:
     source: .
     plugin: go
     go-importpath: github.com/gchaincl/httplab
- 
+
 apps:
   httplab:
     command: httplab
@@ -84,7 +84,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`httplab.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
+If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
@@ -139,10 +139,10 @@ version: git
 summary: Official Go implementation of the Ethereum protocol
 description: |
     Official Go implementation of the Ethereum protocol
- 
+
 grade: devel
 confinement: devmode
- 
+
 apps:
   abigen:
     command: bin/abigen
@@ -162,7 +162,7 @@ apps:
     command: bin/swarm
   wnode:
     command: bin/wnode
- 
+
 parts:
   go:
     source-tag: go1.7.5
@@ -189,7 +189,7 @@ geth:
 
 The `go` part specifies no plugin, which means it will be fetched from the parts repository. This is a collection of community-contributed definitions which can be used by anyone when building a snap, saving you from needing to specify the source and build rules for each system dependency. You can use `snapcraft search` to find more parts to use and `snapcraft define <part-name>` to verify how the part is defined.
 
-In this case the go part requires only that we specify what version of Go we wish to build with for geth. As this part is not '`after`' anything else, it will be done first. 
+In this case the go part requires only that we specify what version of Go we wish to build with for geth. As this part is not '`after`' anything else, it will be done first.
 
 ```yaml
 go:
@@ -297,13 +297,13 @@ Here are all the Go plugin-specific keywords:
       not be useful either.
       If the package is a part of the go-importpath the local package
       corresponding to those sources will be used.
- 
+
     - go-importpath:
       (string)
       This entry tells the checked out `source` to live within a certain path
       within `GOPATH`.
       This is not needed and does not affect `go-packages`.
- 
+
     - go-buildtags:
       (list of strings)
       Tags to use during the go build. Default is not to use any build tags.
