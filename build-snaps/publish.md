@@ -7,7 +7,7 @@ You can share your snaps with the world by publishing them to the Snap Store. Al
 
 ## 1. Create a Snap Store account
 
-To release snaps you will need to create an account on the [Snap Store dashboard](https://dashboard.snapcraft.io/). Here you can customize how your snaps are presented, review your uploads, and control the release process.
+To release snaps you will need to create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads, and control the release process.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
