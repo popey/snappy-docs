@@ -92,6 +92,7 @@ If you have just installed snap support, start a new shell so your `PATH` is upd
 ```
 git clone https://github.com/snapcraft-docs/electron-quickstart
 cd electron-quickstart
+npm install
 npm run dist
 ```
 
