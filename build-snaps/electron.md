@@ -83,7 +83,7 @@ The distribution target is then made to start the snap build. The `appId` must b
 
 You’ll first need to [install snap support](https://docs.snapcraft.io/core/install), and then install the snapcraft tool:
 ```
-sudo snap install --beta --classic snapcraft
+sudo snap install --candidate --classic snapcraft
 ```
 
 To build Electron applications you also need Node installed, which can be downloaded from [NodeSource](https://github.com/nodesource/distributions).
