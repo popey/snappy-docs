@@ -90,8 +90,8 @@ To build Electron applications you also need Node installed, which can be downlo
 
 If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
 ```
-git clone https://github.com/snapcraft-docs/electron-quickstart
-cd electron-quickstart
+git clone https://github.com/snapcraft-docs/electron-quick-start
+cd electron-quick-start
 npm install
 npm run dist
 ```
