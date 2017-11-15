@@ -3,7 +3,7 @@ layout: base
 title: C/C++
 ---
 
-Snapcraft uses common tools like autotools, make and cmake to build applications and package them along with appropriate dependencies to create snaps for people to install on Linux.
+Snapcraft builds on top of tools like autotools, make, and cmake to create snaps for people to install on Linux.
 
 # What problems do snaps solve for C/C++ applications?
 
@@ -13,6 +13,8 @@ Here are some snap advantages that will benefit many C/C++ projects:
 
 * Simplify installation instructions, regardless of distribution, to snap install myapp.
 * Directly control the delivery of automatic application updates.
+* Bundle all the runtime requirements, including the exact versions of system libraries.
+* Extremely simple creation of services.
 
 # Getting started
 
@@ -20,7 +22,7 @@ By way of an example, let’s take a look at how a C application can be snapped 
 
 ## DOSBox Snap
 
-Using a few lines of yaml and the snapcraft tool, a C application, it's dependencies can be packaged as a snap. We’ll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The DOSBox example shows the entire snapcraft.yaml for an existing project. We'll break this down.
 
 ```yaml
 name: dosbox
@@ -78,9 +80,9 @@ confinement: devmode
 
 ### Parts
 
-Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the DOSBox source release tarball. In other cases these can point to local directories, remote git repositories, or tarballs.
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the DOSBox source release tarball. In other cases these can point to local directories, remote git repositories or other revision control systems.
 
-The autotools plugin uses the standard tools, configure and make to build the part. Before building the part the dependencies listed as build-packages are installed.
+Before building the part the dependencies listed as `build-packages` are installed. The autotools plugin uses the standard tools, `configure` and `make` to build the part. 
 
 ```yaml
 parts:
@@ -116,7 +118,7 @@ If your application is intended to run as a service you simply add the line `dae
 
 You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
-sudo snap install --beta --classic snapcraft
+sudo snap install --candidate --classic snapcraft
 ```
 
 If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
@@ -148,7 +150,7 @@ sudo snap remove dosbox
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
 
