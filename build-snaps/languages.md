@@ -11,7 +11,7 @@ Create snaps from your preferred programming language.
       <a href="/build-snaps/pre-built"><img class="inline-logos__image" src="{{ site.asset_path }}24be2e8c-adwaita-package.png" alt="Pre-built apps" /><br />Pre-built apps</a>
     </li>
     <li class="inline-logos__item box">
-      <a href="/build-snaps/c"><img class="inline-logos__image" src="{{ site.asset_path }}24be2e8c-adwaita-package.png" alt="C/C++ apps" /><br />C/C++ apps</a>
+      <a href="/build-snaps/c"><img class="inline-logos__image" src="{{ site.asset_path }}485f8203-cpp_logo.png" alt="C/C++ apps" /><br />C/C++ apps</a>
     </li>
     <li class="inline-logos__item box">
       <a href="/build-snaps/go"><img class="inline-logos__image" src="{{ site.asset_path }}c85a212e-go-logo.png" alt="Go" /><br />Go</a>
