@@ -84,10 +84,14 @@ Snaps can ship multiple applications and commands. The following keys allow you 
       Optional command to run after daemon stops.
     * `restart-condition` (string)
       Condition to restart the daemon under. Valid values are `on-failure`, `on-success`, `on-abnormal`, `on-abort`, `always` and `never`. Defaults to `on-failure`. See the [systemd.service manual](https://www.freedesktop.org/software/systemd/man/systemd.service.html#Restart=) on `Restart` for details.
-    * `listen-stream` (string)
-      Optional stream abstract socket name or socket path. Valid formats are: `<path>`, `@<snap name>` or `@<snap name>_<suffix>`. When defined as a path, it should normally be in one of the snap [writable directories](/reference/confinement). For an abstract socket it must start with `@<snap name>` or `@<snap name>_`.
-    * `socket` (bool)
-      Whether the daemon is socket activated. Defaults to `false`, and must be defined together with `listen-stream` if `true`.
+    * `sockets` (yaml subsection)
+      If the daemon is socket activated, this section contains a map declaring sockets that will activate the service.
+      If this section is declared, the application needs to declare the `network-bind` plug.
+       * `listen-stream` (string)
+          The socket abstract name or socket path. Valid formats are: `<port>`, `[::]:<port>`, `[::1]:<port>` and `127.0.0.1:<port>` for TCP sockets, `$SNAP_DATA/<path>`, `$SNAP_COMMON/<path>` and `@snap.<snap name>.<suffix>` for Unix sockets.
+       * `socket-mode`: (int)
+          For Unix sockets, the file permission (e.g. `0644`).
+
 
 ### Parts
 
