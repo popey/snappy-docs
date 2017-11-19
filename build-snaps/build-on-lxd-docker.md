@@ -27,12 +27,9 @@ Next, create an Ubuntu 16.04 container for building snaps. We'll assume your pro
        lxc launch ubuntu:16.04 snapcraft -c security.privileged=true
        lxc config device add snapcraft homedir disk source=/home/$USER path=/home/ubuntu
 
-After the previous step, you should update apt to get the latest information on all repositores. If you skip this step, apt may not find snapcraft if you try to install it:
-
-       lxc exec snapcraft -- apt update
-
 Finally, install snapcraft into the container:
 
+       lxc exec snapcraft -- apt update
        lxc exec snapcraft -- apt install snapcraft
 
 You're all set. Any time you want to build a snap, type the following command to run snapcraft relative to the current directory:
