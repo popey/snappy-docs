@@ -25,8 +25,8 @@ Make sure the `snapcraft` and `snap` commands know about you by logging in using
 
 ### Example
 
-    ```snapcraft login
-       snap login you@yourdomain.com```
+    snapcraft login
+    snap login you@yourdomain.com
 
 Note that `logout` commands are available as well.
 
