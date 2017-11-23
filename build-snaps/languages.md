@@ -17,6 +17,9 @@ Create snaps from your preferred programming language.
       <a href="/build-snaps/go"><img class="inline-logos__image" src="{{ site.asset_path }}c85a212e-go-logo.png" alt="Go" /><br />Go</a>
     </li>
     <li class="inline-logos__item box">
+      <a href="/build-snaps/java"><img class="inline-logos__image" src="{{ site.asset_path }}9c609032-150px-Java_logo.png" alt="Java" /><br />Go</a>
+    </li>
+    <li class="inline-logos__item box">
       <a href="/build-snaps/node"><img class="inline-logos__image" src="{{ site.asset_path }}9735ad74-node-logo.png" alt="Node" /><br />Node.js</a>
     </li>
     <li class="inline-logos__item box">
