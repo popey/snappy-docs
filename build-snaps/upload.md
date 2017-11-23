@@ -20,12 +20,11 @@ It's worth noting that the user of your snaps will have to use `--devmode` to in
 ### Example
 
 
-    ```snapcraft push drone-autopilot_stableV2_amd64.snap
+    snapcraft push drone-autopilot_stableV2_amd64.snap
     Uploading drone-autopilot_stableV2_amd64.snap [====================] 100%
     Processing ...
     Ready to release!
     Revision 1 of 'drone-autopilot' created.
-    ```
 
 Note that `snapcraft push` will return an error if you try to push a snap with a name you haven't registered first.
 
@@ -37,9 +36,9 @@ Each time you upload a snap, the Snap Store will assign a revision number to it,
 
 Use these commands for more information about uploading your snap
 
-`snapcraft push - - help`
-`snapcraft status <snap_name>`
-`snapcraft list-revisions <snap_name>`
+- `snapcraft push - - help`
+- `snapcraft status <snap_name>`
+- `snapcraft list-revisions <snap_name>`
 
 ## What's next?
 
