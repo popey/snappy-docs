@@ -11,7 +11,7 @@ New names can be registered by:
 * visiting: [the name registration page](https://dashboard.snapcraft.io/dev/snaps/register-name/)
 * or running `snapcraft register <snap name>`
 
-### Example
+## Example
 
 ```
 snapcraft register drone-autopilot
