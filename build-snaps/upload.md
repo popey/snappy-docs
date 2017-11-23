@@ -10,21 +10,26 @@ Before you upload your snap, have a quick look at your `snapcraft.yaml` file aga
 | `grade: stable` | *all* channels         | *all* channels         | `beta` and `edge` only |
 | `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only | `beta` and `edge` only |
 
-It's worth noting that the user of your snaps will have to use `--devmode` to install a snap using `confinement: devmode`. This means that they have to willingly accept that the snap is breaking out of confinement.
+It's worth noting that the user of your snaps will have to use `--devmode` to install a snap using `confinement: devmode`. The same principle applies to `classic` confinement. This means that they have to willingly accept that the snap is breaking out of confinement.
 
 ### Pushing the snap
 
-1. CD to the directory containing your snap file
+1. `cd` to the directory containing your snap file
 2. Run the `snapcraft push` command, appending your snap's version and architecture
 
-### Example
+#### Example
 
+```
+snapcraft push drone-autopilot_stableV2_amd64.snap
+```
+Your snap package will then be pushed and processed by the store:
 
-    snapcraft push drone-autopilot_stableV2_amd64.snap
-    Uploading drone-autopilot_stableV2_amd64.snap [====================] 100%
-    Processing ...
-    Ready to release!
-    Revision 1 of 'drone-autopilot' created.
+```
+Uploading drone-autopilot_stableV2_amd64.snap [====================] 100%
+Processing ...
+Ready to release!
+Revision 1 of 'drone-autopilot' created.
+```
 
 Note that `snapcraft push` will return an error if you try to push a snap with a name you haven't registered first.
 
@@ -36,10 +41,10 @@ Each time you upload a snap, the Snap Store will assign a revision number to it,
 
 Use these commands for more information about uploading your snap
 
-- `snapcraft push - - help`
-- `snapcraft status <snap_name>`
-- `snapcraft list-revisions <snap_name>`
+- `snapcraft push --help`
+- `snapcraft status <snap name>`
+- `snapcraft list-revisions <snap name>`
 
 ## What's next?
 
-[Releasing your snap](/release)
+[Releasing your snap](release)
