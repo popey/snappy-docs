@@ -28,7 +28,7 @@ To release a snap, run `snapcraft release snap-name revision channel`.
 
 ### Example
 
-    ```snapcraft release drone-autopilot 1 stable
+    snapcraft release drone-autopilot 1 stable
     The 'stable' channel is now open.
 
     Channel    Version    Revision
@@ -37,14 +37,12 @@ To release a snap, run `snapcraft release snap-name revision channel`.
     candidate  -          -
     beta       -          -
     edge       -          -
-    ```
     
 Your snap is now available for users to install and in case of a `stable` release, it will be listed in search results.
 
-    ```snap find drone
+    snap find drone
     Name             Version   Developer  Notes  Summary
     drone-autopilot  stableV2  you        -      An autopilot mode for your drones
-    ```
     
 ## What comes next?
 
