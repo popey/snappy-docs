@@ -1,4 +1,7 @@
-## Upload your snap
+---
+layout: base
+title: Upload your snap
+---
 
 Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which [channels](#release-channels) you can release your snap to.
 
@@ -17,11 +20,12 @@ It's worth noting that the user of your snaps will have to use `--devmode` to in
 ### Example
 
 
-    $ snapcraft push drone-autopilot_stableV2_amd64.snap
+    ```snapcraft push drone-autopilot_stableV2_amd64.snap
     Uploading drone-autopilot_stableV2_amd64.snap [====================] 100%
     Processing ...
     Ready to release!
     Revision 1 of 'drone-autopilot' created.
+    ```
 
 Note that `snapcraft push` will return an error if you try to push a snap with a name you haven't registered first.
 
@@ -30,10 +34,13 @@ Note that `snapcraft push` will return an error if you try to push a snap with a
 Each time you upload a snap, the Snap Store will assign a revision number to it, starting at 1. This revision number will be incremented each time you upload a new version of your snap. The revision number also increments when uploading a build for a new architecture.
 
 ### Need more information?
+
 Use these commands for more information about uploading your snap
-$ snapcraft push - - help
-$ snapcraft status <snap_name>
-$ snapcraft list-revisions <snap_name>
+
+`snapcraft push - - help`
+`snapcraft status <snap_name>`
+`snapcraft list-revisions <snap_name>`
 
 ## What's next?
-[Releasing your snap](https://docs.snapcraft.io/build-snaps/release)
+
+[Releasing your snap](/release)
