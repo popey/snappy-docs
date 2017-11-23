@@ -1,6 +1,6 @@
 ---
+layout: base
 title: Register a name for your snap
-layut: base
 ---
 
 You can push your own version of a snap, provided you do so under a name you have rights to.
@@ -13,12 +13,12 @@ New names can be registered:
 
 ### Example
 
-    $ snapcraft register drone-autopilot
+     `snapcraft register drone-autopilot`
 
 If the name is available, snapcraft will then confirm the registration went through:
 
-    $ Registering drone-autopilot.
-    Congratulations! You're now the publisher for 'drone-autopilot'.
+    ```Registering drone-autopilot.
+    Congratulations! You're now the publisher for 'drone-autopilot'.```
 
 You are now the only developer able to use this name in the Snap Store. Note that the Snap Store allows you to share snaps management (push and release) with other developers on a per-snap basis.
 
@@ -28,4 +28,4 @@ If needed, snaps can be renamed to ensure they match the expectations of most us
 
 ## What comes next?
 
-[Uploading your snap](https://docs.snapcraft.io/build-snaps/upload)
+[Uploading your snap](/upload)
