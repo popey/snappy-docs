@@ -17,8 +17,8 @@ New names can be registered:
 
 If the name is available, snapcraft will then confirm the registration went through:
 
-    ```Registering drone-autopilot.
-    Congratulations! You're now the publisher for 'drone-autopilot'.```
+    Registering drone-autopilot.
+    Congratulations! You're now the publisher for 'drone-autopilot'.
 
 You are now the only developer able to use this name in the Snap Store. Note that the Snap Store allows you to share snaps management (push and release) with other developers on a per-snap basis.
 
