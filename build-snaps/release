@@ -1,10 +1,13 @@
-## Release your snap
+---
+layout: base
+title: Release your snap
+---
 
 Uploading a snap doesn't make it immediately available for installation. You have to choose the channel(s) you want to release into.
 
 ### Release channels
 
-You’ll need to make sure when you [upload your snap](https://docs.snapcraft.io/build-snaps/upload) that your snapcraft.yaml has the correct confinement and grade to release to a channel.
+You’ll need to make sure when you [upload your snap](/upload) that your snapcraft.yaml has the correct confinement and grade to release to a channel.
 
 There are four channels available for your snap:
 
@@ -15,7 +18,7 @@ There are four channels available for your snap:
 
 The same revision of a snap can be released into several channels at once.
 
-More information on release channels can be found [here](https://docs.snapcraft.io/reference/channels)
+More information on release channels can be found [here](/reference/channels)
 
 ### Release process
 
@@ -25,7 +28,7 @@ To release a snap, run `snapcraft release snap-name revision channel`.
 
 ### Example
 
-    $ snapcraft release drone-autopilot 1 stable
+    ```snapcraft release drone-autopilot 1 stable
     The 'stable' channel is now open.
 
     Channel    Version    Revision
@@ -34,12 +37,15 @@ To release a snap, run `snapcraft release snap-name revision channel`.
     candidate  -          -
     beta       -          -
     edge       -          -
-
+    ```
+    
 Your snap is now available for users to install and in case of a `stable` release, it will be listed in search results.
 
-    $ snap find drone
+    ```snap find drone
     Name             Version   Developer  Notes  Summary
     drone-autopilot  stableV2  you        -      An autopilot mode for your drones
-
+    ```
+    
 ## What comes next?
+
 You can customise how your snaps are presented or review your uploads using the [dashboard](https://dashboard.snapcraft.io)
