@@ -3,7 +3,7 @@ layout: base
 title: Upload your snap
 ---
 
-Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which [channels](#release-channels) you can release your snap to.
+Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which [channels](/reference/channels) you can release your snap to.
 
 |                 | `confinement: strict`  | `confinement: classic` | `confinement: devmode` |
 | --------------- | ---------------------- | ---------------------- | ---------------------- |
