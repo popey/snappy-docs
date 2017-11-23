@@ -6,9 +6,9 @@ title: Publish your snap
 You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/core/store). 
 
 There are three key stages to publishing a snap:
-1. [Registering a name for you snap](https://docs.snapcraft.io/build-snaps/register-name)
-2. [Uploading your snap](https://docs.snapcraft.io/build-snaps/upload)
-3. [Releasing your snap](https://docs.snapcraft.io/build-snaps/release)
+1. [Registering a name for you snap](/register-name)
+2. [Uploading your snap](/upload)
+3. [Releasing your snap](/release)
 
 Before you do any of this, you will need to create a snap store account.
 
@@ -31,4 +31,4 @@ Make sure the `snapcraft` and `snap` commands know about you by logging in using
 Note that `logout` commands are available as well.
 
 ## What comes next?
-[Registering a name for your snap](https://docs.snapcraft.io/build-snaps/register-name)
+[Registering a name for your snap](/register-name)
