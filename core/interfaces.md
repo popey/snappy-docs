@@ -43,6 +43,15 @@ install applications using these interfaces from trusted sources.  Transitional
 interfaces will be deprecated as replacement or modified technologies that
 enforce strong application isolation are available.
 
+There are, however, some interfaces which are not automatically connected. The
+user is still free to connect these manually (see below), but the snap
+developer can also request that a given interface be automatically connected
+for their snap. This involves a more thorough security vetting process, and
+justification for using the interfaces in question. To make this request,
+create a new topic in the
+[store category of the forum](https://forum.snapcraft.io/c/store), describing
+your snap and justifying your use of a privileged interface.
+
 ## Creating an interface
 
 The OS snap exposes a number of interfaces to grant snaps access to system functions. You can extend this access by creating your own interfaces.
