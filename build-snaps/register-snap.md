@@ -28,7 +28,7 @@ You are now the only developer able to use this name in the Snap Store. Note tha
 
 ## Name disputes
 
-If needed, snaps can be renamed to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, you may claim it with the [snap registration](https://dashboard.snapcraft.io/dev/snaps/register-snap/) form.
+If needed, snaps can be renamed to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, you may claim it with the [snap registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form.
 
 ## What comes next?
 
