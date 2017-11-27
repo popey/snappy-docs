@@ -17,13 +17,13 @@ Create snaps from your preferred programming language.
       <a href="/build-snaps/go"><img class="inline-logos__image" src="{{ site.asset_path }}c85a212e-go-logo.png" alt="Go" /><br />Go</a>
     </li>
     <li class="inline-logos__item box">
-      <a href="/build-snaps/java"><img class="inline-logos__image" src="{{ site.asset_path }}9c609032-150px-Java_logo.png" alt="Java" /><br />Go</a>
+      <a href="/build-snaps/java"><img class="inline-logos__image" src="{{ site.asset_path }}9c609032-150px-Java_logo.png" alt="Java" /><br />Java</a>
     </li>
     <li class="inline-logos__item box">
       <a href="/build-snaps/node"><img class="inline-logos__image" src="{{ site.asset_path }}9735ad74-node-logo.png" alt="Node" /><br />Node.js</a>
     </li>
     <li class="inline-logos__item box">
-      <a href="/build-snaps/node"><img class="inline-logos__image" src="{{ site.asset_path }}c8a76d95-electron.svg" alt="Electron" /><br />Electron</a>
+      <a href="/build-snaps/electron"><img class="inline-logos__image" src="{{ site.asset_path }}c8a76d95-electron.svg" alt="Electron" /><br />Electron</a>
     </li>
     <li class="inline-logos__item box">
       <a href="/build-snaps/python"><img class="inline-logos__image" src="{{ site.asset_path }}c3d9d13f-python-logo.png" alt="Python" /><br />Python</a>
