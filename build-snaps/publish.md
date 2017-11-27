@@ -6,7 +6,7 @@ title: Publish your snap
 You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/core/store). 
 
 There are three key stages to publishing a snap:
-1. [Registering a name for you snap](register-name)
+1. [Registering your snap](register-snap)
 2. [Uploading your snap](upload)
 3. [Releasing your snap](release)
 
@@ -34,4 +34,4 @@ Note that `logout` commands are available as well.
 
 ## What comes next?
 
-[Registering a name for your snap](register-name)
+[Registering your snap](register-snap)
