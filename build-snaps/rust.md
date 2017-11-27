@@ -3,7 +3,7 @@ layout: base
 title: Rust
 ---
 
-Rust has rich tools for packaging and distributing applications. Snapcraft builds on top of these familiar tools such Rustup, Cargo and `rustc` to create snaps.
+Rust has rich tools for packaging and distributing applications. Snapcraft builds on top of these familiar tools such as Rustup, Cargo and `rustc` to create snaps.
 
 ## What problems do snaps solve for Rust applications?
 
