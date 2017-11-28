@@ -7,7 +7,7 @@ Snapcraft builds on top of the `ament` tool, familiar to any ROS2 developer, to 
 
 ## What problems do snaps solve for ROS2 applications?
 
-ROS2 is currently in beta, and is only just starting to be placed into a beta slice of the OSRF's own Debian archive. Getting your own application there will be difficult until is stabilizes, and it requires that your application is open-source. You're also left with the question of how to update ROS2 and your application on a robotic platform that has already been shipped. With snapcraft it's just one command to bundle a specific ROS2 version along with your application into a snap that works anywhere and can be automatically updated.
+ROS2 is currently in beta, and is only just starting to be placed into a beta slice of the OSRF's own Debian archive. Getting your own application there will be difficult until it stabilizes, and it requires that your application is open-source. You're also left with the question of how to update ROS2 and your application on a robotic platform that has already been shipped. With snapcraft it's just one command to bundle a specific ROS2 version along with your application (proprietary or open-source) into a snap that works anywhere and can be automatically updated.
 
 Here are some snap advantages that will benefit many ROS2 projects:
 
