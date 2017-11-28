@@ -114,7 +114,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`moos-ping.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don't want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
+If you don't want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
@@ -174,7 +174,7 @@ sudo snap remove moos-ping
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your published snaps.
 

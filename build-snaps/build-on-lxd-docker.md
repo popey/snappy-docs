@@ -29,6 +29,7 @@ Next, create an Ubuntu 16.04 container for building snaps. We'll assume your pro
 
 Finally, install snapcraft into the container:
 
+       lxc exec snapcraft -- apt update
        lxc exec snapcraft -- apt install snapcraft
 
 You're all set. Any time you want to build a snap, type the following command to run snapcraft relative to the current directory:

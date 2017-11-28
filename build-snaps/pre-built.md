@@ -31,7 +31,7 @@ summary: Cross-Platform Benchmark
 description: |
   Geekbench 4 measures your system's power and tells you whether your
   computer is ready to roar. How strong is your mobile device or desktop
-  computer? How will it perform when push comes to crunch? These are the 
+  computer? How will it perform when push comes to crunch? These are the
   questions that Geekbench can answer.
 
 confinement: devmode
@@ -57,7 +57,7 @@ summary: Cross-Platform Benchmark
 description: |
   Geekbench 4 measures your system's power and tells you whether your
   computer is ready to roar. How strong is your mobile device or desktop
-  computer? How will it perform when push comes to crunch? These are the 
+  computer? How will it perform when push comes to crunch? These are the
   questions that Geekbench can answer.
 ```
 
@@ -74,7 +74,7 @@ confinement: devmode
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we just have one: a tarball containing the geekbench binary. In other cases these can point to local or remote zips files, deb files, or tarballs.
 
-In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. 
+In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball.
 
 ```yaml
 parts:
@@ -87,7 +87,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`geekbench4.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
+If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
@@ -128,7 +128,7 @@ Removing the snap is simple too:
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
 

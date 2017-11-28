@@ -74,7 +74,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Catkin plugin will bundle `roscore` in the snap. It will also use `rosdep` to determine the dependencies of the `catkin-packages` provided, download them from the ROS archive, and unpack them into the snap. Finally, it will build the `catkin-packages` specified.
 
-**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules, i.e. rules for installing every component of the package necessary to run. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, launch files, etc.
+**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules, i.e. rules for installing every component of the package necessary to run, or every component necessary to use a given library. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, header files, launch files, etc.
 
 ```yaml
 parts:
@@ -168,7 +168,7 @@ sudo snap remove ros-talker-listener
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your published snaps.
 

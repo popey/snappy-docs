@@ -81,7 +81,8 @@ Let's have a look at our final file:
 name: hello
 version: "2.10"
 summary: GNU Hello, the "hello world" snap
-description: GNU Hello prints a friendly greeting
+description: GNU Hello prints a friendly greeting.
+grade: stable
 confinement: strict
 
 apps:

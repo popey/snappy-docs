@@ -17,9 +17,7 @@ sudo apt update
 sudo apt install snapd
 ```
 
-### Additional steps
-
-#### Missing pulseaudio
+### Lubuntu
 
 Snaps which use the pulseaudio interface to playback sounds & music also require pulseaudio to be installed. This is already installed for the majority of Ubuntu flavours, however Lubuntu does not ship pulseaudio, so it must be installed manually if audio is desired from those snaps.
 
@@ -27,18 +25,6 @@ Snaps which use the pulseaudio interface to playback sounds & music also require
 sudo apt install pulseaudio
 ```
 Once installed, logout and back in to ensure pulseaudio is running.
-
-#### Unable to launch URLs from snapped applications
-
-Some snaps require the use of an optional package to launch external browser sessions, such as to open online help, documentation, or to perform web based logins. On Ubuntu 16.04 and above, and on derivatives based on 16.04 and above, install that package from the archive:
-
-```
-sudo apt update
-sudo apt install snapd-xdg-open
-```
-
-
-Afterwards everything is setup to get you started with snaps.
 
 ## Next Steps
 
