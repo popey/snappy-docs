@@ -36,8 +36,8 @@ grade: devel
 confinement: devmode
 
 parts:
-  ros2-examples:
-    source: https://github.com/ros2/examples.git
+  examples:
+    source: .
     plugin: ament
     version: release-beta3
 
@@ -72,14 +72,14 @@ confinement: devmode
 
 #### Parts
 
-Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the ros2-examples source code. Parts can point to local directories, remote git repositories, or tarballs.
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the ros2 examples source code. Parts can point to local directories, remote git repositories, or tarballs.
 
 The Ament plugin will bundle the requested version of the ROS2 underlay in the snap. It will then use that bootstrapped ROS2 to build the provided workspace, and install it into the snap.
 
 ```yaml
 parts:
-  ros2-examples:
-    source: https://github.com/ros2/examples.git
+  examples:
+    source: .
     plugin: ament
     version: release-beta3
 ```
@@ -113,8 +113,8 @@ sudo snap install --candidate --classic snapcraft
 If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
 
 ```
-git clone https://github.com/snapcraft-docs/ros2-talker-listener
-cd ros2-talker-listener
+git clone https://github.com/snapcraft-docs/ros2-examples
+cd ros2-examples
 snapcraft
 ```
 
