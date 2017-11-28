@@ -22,7 +22,7 @@ Let's take a look at a talker and listener out of the ROS2 examples, and show ho
 
 ### ROS2 Examples
 
-Snaps are defined in a single yaml file placed in the root of your project. Here is the entire `snapcraft.yaml` for this project. Let's break it down.
+Snaps are defined in a single yaml file placed in the root of your project. The entire `snapcraft.yaml` for the ros2-talker-listener example is shown below. We'll break this down.
 
 ```yaml
 name: ros2-talker-listener
@@ -72,7 +72,7 @@ confinement: devmode
 
 #### Parts
 
-Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: ros2-examples. Parts can point to local directories, remote git repositories, or tarballs.
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the ros2-examples source code. Parts can point to local directories, remote git repositories, or tarballs.
 
 The Ament plugin will bundle the requested version of the ROS2 underlay in the snap. It will then use that bootstrapped ROS2 to build the provided workspace, and install it into the snap.
 
@@ -88,7 +88,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`ros2-talker-listener.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don't want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
+If you don't want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests/455). These are set up automatically when your snap is installed from the Snap Store.
 
 Since the examples didn't include any launch files, we have two commands here: one to launch the C++-based talker, and one to launch the Python-based listener.
 
@@ -124,7 +124,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install ros2-talker-listener_*.snap --devmode --dangerous
 ```
 
-You can then try it out. Open two terminals. In one, run the talker:
+Now open two terminals. In one, run the talker:
 
 ```
 $ ros2-talker-listener.talker
@@ -154,7 +154,7 @@ sudo snap remove ros2-talker-listener
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your published snaps.
 
