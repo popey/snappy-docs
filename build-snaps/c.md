@@ -16,6 +16,10 @@ Here are some snap advantages that will benefit many C/C++ projects:
 * Bundle all the runtime requirements, including the exact versions of system libraries.
 * Extremely simple creation of services.
 
+## How long will this guide take to complete?
+
+Typically this guide will take around 20 minutes and will result in a working C++ application in a snap. Once complete, you'll understand how to package C/C++ applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+
 # Getting started
 
 By way of an example, let’s take a look at how a C application can be snapped using snapcraft.
