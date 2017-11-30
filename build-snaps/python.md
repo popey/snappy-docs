@@ -16,6 +16,10 @@ Here are some snap advantages that will benefit many Python projects:
   * Directly control the delivery of automatic application updates.
   * Extremely simple creation of daemons.
 
+## How long will this guide take to complete?
+
+Typically this guide will take around 20 minutes and will result in a working Python app in a snap. Once complete, you'll understand how to package Python applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+
 ## Getting started
 
 Let's take a look at offlineimap and youtube-dl by way of examples. Both are command line applications. offlineimap uses Python 2 and only has Python module requirements. youtube-dl uses Python 3 and has system package requirements, in this case `ffmpeg`.
