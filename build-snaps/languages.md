@@ -40,5 +40,8 @@ Create snaps from your preferred programming language.
     <li class="inline-logos__item box">
       <a href="/build-snaps/ros"><img class="inline-logos__image" src="{{ site.asset_path }}dc84f68e-c8749268-logo-ros.png" alt="ROS" /><br />ROS</a>
     </li>
+    <li class="inline-logos__item box">
+      <a href="/build-snaps/ros2"><img class="inline-logos__image" src="{{ site.asset_path }}9b32c9a4-3979232.png" alt="ROS2" /><br />ROS 2</a>
+    </li>
   </ul>
 </div>
