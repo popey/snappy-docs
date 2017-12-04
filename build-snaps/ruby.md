@@ -16,6 +16,10 @@ Here are some snap advantages that will benefit many Ruby projects:
   * Directly control the delivery of automatic application updates.
   * Extremely simple creation of services.
 
+## How long will this guide take to complete?
+
+Typically this guide will take around 20 minutes and will result in a working Ruby app in a snap. Once complete, you'll understand how to package Ruby applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+
 # Getting started
 
 By way of an example, let's look at how a snap is created for the Travis CI app.
