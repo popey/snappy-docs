@@ -14,7 +14,7 @@ Before you do any of this, you will need to create a snap store account.
 
 ## Create a Snap Store account
 
-To release snaps you will need to create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/snaps/). Here you can customize how your snaps are presented and review your uploads.
+To release snaps you will need to create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/account/). Here you can customize how your snaps are presented and review your uploads.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
