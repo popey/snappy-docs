@@ -147,7 +147,7 @@ sudo snap remove travis
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/openid/login/?next=/dev/account/). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [the dashboard](https://dashboard.snapcraft.io/dev/account/). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
 
