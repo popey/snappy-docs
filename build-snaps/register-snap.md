@@ -8,7 +8,7 @@ You can push your own version of a snap, provided you do so under a name you hav
 New snaps can be registered by:
 
 * clicking **Register Snap** at the top of the [Snap Store dashboard](https://dashboard.snapcraft.io)
-* visiting: [the snap registration page](https://dashboard.snapcraft.io/dev/snaps/register-snap/)
+* visiting: [the snap registration page](https://dashboard.snapcraft.io/dev/snaps/register)
 * or running `snapcraft register <snap name>`
 
 ## Example
@@ -28,7 +28,7 @@ You are now the only developer able to use this name in the Snap Store. Note tha
 
 ## Name disputes
 
-If needed, snaps can be renamed to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, you may claim it with the [snap registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form.
+If needed, snaps can be renamed to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, you may claim it with the [snap registration](https://dashboard.snapcraft.io/dev/snaps/register) form.
 
 ## What comes next?
 
