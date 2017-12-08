@@ -3,7 +3,7 @@ layout: base
 title: Snap stores
 ---
 
-There are multiple ways to distribute snaps as the format is not tied to a specific distribution system. However, the recommended way to distribute snaps is to release them in the Snap Store.
+There are multiple ways to distribute snaps as the format is not tied to a specific distribution system. However, the best way to distribute snaps is to release them in the Snap Store. Here they can be installed by using the command line for systems that are running [snapd](/core/install). Once the snap is in the stable channel users can find your snap in the [snap directory](https://snapcraft.io/discover) or by using Gnome Software.
 
 ## The Snap Store
 
