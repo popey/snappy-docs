@@ -3,19 +3,19 @@ layout: base
 title: Snap stores
 ---
 
-There are multiple ways to distribute snaps as the format is not tied to a specific distribution system. However, the best way to distribute snaps is to release them in the Snap Store. Here they can be installed by using the command line for systems that are running [snapd](/core/install). Once the snap is in the stable channel users can find your snap in the [snap directory](https://snapcraft.io/discover) or by using Gnome Software.
+Given the simplicity and flexibility of the snap format, there are many ways to distribute snap applications. Using the Snap Store exposes your application to tens of millions of potential users and gives you detailed install statistics, so using it is recommended. Once the snap is in the stable channel users can find your snap in the [snap directory](https://snapcraft.io/discover) or by using Gnome Software.
 
 ## The Snap Store
 
 The main way of distributing snaps is through the [Snap Store dashboard](https://dashboard.snapcraft.io), where you can customize how snaps are presented, review each new pushed snap, and control the release process over several release channels. Here is the model it follows:
 
-### 1. Developer namespace
+### 1. Username
 
-You'll choose a unique developer namespace as part of the store account creation process. This namespace will represent you as a publisher and you won't be able to change it afterwards.
+You'll choose a username as part of creating your Snap Store account. This unique name will represent you as a publisher, so pick a name that best reflects your brand. You will not be able to change it once set.
 
 ### 2. Naming
 
-You can release a snap under any name you have rights to. Names can be registered by using the [`snapcraft register`](/build-snaps/register) command, or by visiting the [Register new snap](https://dashboard.snapcraft.io/snaps/register/) dashboard page. You can also grant other developers permission to release versions of a snap you own, for example as part of an open source project.
+You can release a snap under any name you have rights to. Names can be registered by using the [`snapcraft register`](/build-snaps/register) command, or by visiting the [Register new snap](https://dashboard.snapcraft.io/snaps/register/) dashboard page. You can also grant other developers permission to release versions of a snap you own on the dashboard "Collaboration" page.
 
 ### 3. Pushing
 
@@ -25,13 +25,15 @@ It's worth noting that when you push a snap, the Snap Store assigns it a revisio
 
 ### 4. Releasing
 
-After pushing it, your snap is reviewed by way of automated checks. If your app uses sensitive [interfaces](/core/interfaces), it may be manually reviewed and you will receive an email notifying you of the review state.
+After pushing your snap, it is reviewed by way automated checks. Most automated reviews pass with no further action needed.
+
+Use of some [interfaces](/core/interfaces) will trigger a manual review. You will receive emails explaining any further action needed and the state of the review process.
 
 Once your snap has been reviewed and approved, you can release it using the [`snapcraft release`](/build-snaps/release) command, instantly making the snap available to users.
 
 #### Release channels
 
-Snaps can be released into multiple [channels](/reference/channels) (`stable`, `candidate`, `beta`, and `edge`). This enables you to engage with users who are willing to test changes, and helps users decide how close to the leading edge of development they want to be.
+Snaps can be released into multiple [channels](/reference/channels) (`stable`, `candidate`, `beta`, and `edge`). This enables you to engage with users who are willing to test changes. It lets users decide how close to the leading edge of development they want to be.
 
 By default, snaps are installed from the `stable` channel. Versions of snaps from other channels need to be explicitly selected:
 
