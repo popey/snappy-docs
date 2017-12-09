@@ -92,7 +92,7 @@ confinement: devmode
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the Parity source code. In other cases these can point to local directories, remote git repositories, or tarballs.
 
-This example will also bundle the current stable release of Rust in the snap using Rustup and you can define the exact version of Rust with the optional ` - rust-revision:` keyword, should you have specific requirements. Dependencies from your `Cargo.toml` will also be bundled.
+This example will also bundle the current stable release of Rust in the snap using Rustup and you can define the exact version of Rust with the optional `- rust-revision:` keyword, should you have specific requirements. Dependencies from your `Cargo.toml` will also be bundled.
 `build-packages:` include any packages from the Ubuntu archive required for just the build step and `stage-packages:` bundles packages from the Ubuntu archive that are required at runtime.
 
 ```yaml
