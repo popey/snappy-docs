@@ -22,7 +22,7 @@ Typically this guide will take around 20 minutes and will result in a working C+
 
 # Getting started
 
-By way of an example, let’s take a look at how a C application can be snapped using snapcraft.
+By way of an example, let’s take a look at how a C++ application can be snapped using snapcraft.
 
 ## DOSBox Snap
 
