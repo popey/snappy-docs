@@ -105,7 +105,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install dist/electron-quick-start_1.0.0_amd64.snap --dangerous --devmode
 ```
 
-You can then try it out
+You can then try it out:
 ```
 electron-quick-start
 ```
