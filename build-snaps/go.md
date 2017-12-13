@@ -119,7 +119,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install httplab_*.snap --devmode --dangerous
 ```
 
-You can then try it out
+You can then try it out:
 
 ```
 httplab
