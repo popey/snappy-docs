@@ -146,7 +146,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install freeplane_*.snap --devmode --dangerous
 ```
 
-You can then try it out
+You can then try it out:
 
 ```
 freeplane
