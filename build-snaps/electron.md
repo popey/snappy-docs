@@ -11,7 +11,7 @@ Compared to Mac and Windows, distributing an Electron application for Linux and 
 
 Here are some snap advantages that will benefit many Electron projects:
 
-* Simplify installation instructions, regardless of distribution, to snap install myelectronapp.
+* Simplify installation instructions, regardless of distribution, to `snap install myelectronapp`.
 * Directly control the delivery of automatic application updates.
 
 # How long will this guide take to complete?
