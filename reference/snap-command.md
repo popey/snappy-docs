@@ -320,6 +320,10 @@ If `snap-dir` argument is omitted, the try command will attempt to infer it if
 either snapcraft.yaml file and prime directory or meta/snap.yaml file can be
 found relative to current working directory.
 
+Once the installed unpacked snap is finished with, it can be uninstalled with the 
+[`remove`](#remove) option.
+
+
 #### Command options
 * `--devmode`:          Put snap in development mode and disable security confinement
 * `--jailmode`:         Put snap in enforced confinement mode
