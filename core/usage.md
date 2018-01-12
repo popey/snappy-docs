@@ -32,7 +32,7 @@ Searches look for matches in the snap name or description:
     hello-huge     1.0      noise      -      A really big snap
     hello-world    6.1      canonical  -      Hello world example
 
-Community developer Brian Douglass is also maintaining an [online frontend](https://uappexplorer.com/apps?type=snappy&sort=-last_updated) to browse the Snap Store.
+Community developer Brian Douglass maintains an [online directory](https://uappexplorer.com/snaps) of the Snap Store.
 
 ## Install snaps
 
