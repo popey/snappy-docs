@@ -187,7 +187,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 
 Run the command:
 
-    youtube-dl “https://www.youtube.com/watch?v=k-laAxucmEQ”
+    youtube-dl "https://www.youtube.com/watch?v=k-laAxucmEQ"
 
 Removing the snap is simple too:
 
