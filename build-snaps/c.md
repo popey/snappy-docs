@@ -11,7 +11,7 @@ Snapcraft bundles necessary libraries required by the application, and can confi
 
 Here are some snap advantages that will benefit many C/C++ projects:
 
-* Simplify installation instructions, regardless of distribution, to snap install myapp.
+* Simplify installation instructions, regardless of distribution, to `snap install myapp`.
 * Directly control the delivery of automatic application updates.
 * Bundle all the runtime requirements, including the exact versions of system libraries.
 * Extremely simple creation of services.

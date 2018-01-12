@@ -3,7 +3,7 @@ layout: base
 title: Install snapd on Debian
 ---
 
-**Note:** Rasbian is currently not supported due to missing features in the kernel shipped.
+**Note:** Raspbian is currently not supported due to missing features in the kernel shipped.
 
 You can install snapd on a Debian distribution via:
 
