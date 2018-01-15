@@ -13,7 +13,7 @@ What follows is a list of all the keys the `snapcraft.yaml` file can contain.
 * Keys on the same level can be declared in any order, but are grouped and ordered in this document to clarify their purpose.
 * Required keys are in **bold**.
 
-### Store metadata
+## Top-level metadata
 
 By convention at the top of the file, the following keys are consumed by the store to present your package to users and inform snapd about your snap.
 
@@ -29,6 +29,8 @@ By convention at the top of the file, the following keys are consumed by the sto
   <li style="margin-bottom: 0;"><a href="#assumes"><code>assumes</code></a></li>
   <li style="margin-bottom: 0;"><a href="#epoch"><code>epoch</code></a></li>
 </ul>
+
+## Top-level YAML subsections
 
 ### Apps and daemons
 
@@ -102,6 +104,7 @@ The "`parts`" YAML subsection declares individual pieces of code to be imported 
 The name of the resulting snap.
 
 * Type: string
+* Required: yes
 * Example:
 
       name: hello-world
@@ -113,6 +116,7 @@ The name of the resulting snap.
 The version of the resulting snap.
 
 * Type: string
+* Required: yes
 * Example:
 
       version: 1.2.3+git
@@ -122,6 +126,7 @@ The version of the resulting snap.
 A 78 characters max sentence to present your snap.
 
 * Type: string
+* Required: yes
 * Example:
 
       summary: hello-world prints the user name on the command line.
@@ -132,6 +137,7 @@ The description for the snap, this can and is expected to be a longer
 presentation of the snap.
 
 * Type: string
+* Required: yes
 * Examples:
 
       description: A longer description of the hello-world snap.
@@ -386,6 +392,7 @@ A map of part names to their own part configuration.
 Each part is independant from the others but you can control in which order they are processed using the [`after`](#after) key.
 
 * Type: YAML subsection
+* Required: yes
 * Example:
 
       parts:
@@ -401,6 +408,7 @@ Each part is independant from the others but you can control in which order they
 A name for an individual part to start a part declaration, it's always a subsection of `parts`.
 
 * Type: YAML subsection
+* Required: yes
 
 ### plugin
 
@@ -408,6 +416,7 @@ Declares the plugin name that will manage this part. Snapcraft will pass
 to it all the other user-specified part options.
 
 * Type: string
+* Required: yes
 * Example:
 
       parts:
