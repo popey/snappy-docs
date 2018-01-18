@@ -8,7 +8,7 @@ You can push your own version of a snap, provided you do so under a name you hav
 New snaps can be registered by:
 
 * clicking **Register Snap** at the top of the [Snap Store dashboard](https://dashboard.snapcraft.io)
-* visiting: [the snap registration page](https://dashboard.snapcraft.io/snaps/register)
+* visiting: [the snap registration page](https://dashboard.snapcraft.io/register-snap/)
 * or running `snapcraft register <snap name>`
 
 ## Example
