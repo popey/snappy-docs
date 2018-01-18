@@ -4,10 +4,10 @@ title: Install snapd on Arch Linux
 ---
 
 snapd is available in the AUR (Arch User Repository) of Arch Linux. It can
-be installed via:
+be installed via your favorite AUR helper (e.g. yaourt).
 
 ```
-sudo pacman -S snapd
+sudo yaourt -S snapd
 ```
 
 Once installed the systemd unit which is responsible to manage the
