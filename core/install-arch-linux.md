@@ -3,7 +3,7 @@ layout: base
 title: Install snapd on Arch Linux
 ---
 
-snapd is available in the community repository of Arch Linux. It can
+snapd is available in the AUR (Arch User Repository) of Arch Linux. It can
 be installed via:
 
 ```
@@ -17,6 +17,8 @@ you have to do this manually:
 ```
 sudo systemctl enable --now snapd.socket
 ```
+
+Restart the computer for post-install changes to take effect.
 
 Afterwards everything is setup to get you started with snaps.
 
