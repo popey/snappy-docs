@@ -30,7 +30,7 @@ Snaps are defined in a single yaml file placed in the root of your project. The 
 
 ```yaml
 name: geekbench4
-version: 4.1.0
+version: 4.2.0
 summary: Cross-Platform Benchmark
 description: |
   Geekbench 4 measures your system's power and tells you whether your
@@ -43,7 +43,7 @@ confinement: devmode
 parts:
   geekbench4:
     plugin: dump
-    source: http://cdn.primatelabs.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
+    source: http://cdn.geekbench.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
 
 apps:
   geekbench4:
@@ -56,7 +56,7 @@ The `snapcraft.yaml` starts with a small amount of human-readable metadata, whic
 
 ```yaml
 name: geekbench4
-version: 4.1.0
+version: 4.2.0
 summary: Cross-Platform Benchmark
 description: |
   Geekbench 4 measures your system's power and tells you whether your
@@ -84,7 +84,7 @@ In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from th
 parts:
   geekbench4:
     plugin: dump
-    source: http://cdn.primatelabs.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
+    source: http://cdn.geekbench.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
 ```
 
 #### Apps
