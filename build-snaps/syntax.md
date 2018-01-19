@@ -662,6 +662,21 @@ fail if you're not building for amd64:
     - on amd64: [foo]
     - else fail
 
+If on the other hand you want a package only when building for a certain
+target architecture:
+
+    - to armhf: [spam]
+
+Or even more specifically from amd64 to armhf:
+
+    - on amd64 to armhf: [eggs]
+
+The same can be written on separate lines as well:
+
+    - on amd64:
+      - to armhf:
+        - eggs
+
 Now let's discuss `try`:
 
     - try:
