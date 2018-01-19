@@ -452,9 +452,9 @@ directory tree or a tarball or a revision control repository
 As in the example, one may simply specify a string, in which case that source
 will be used regardless of the build environment.
 
-If the source instead needs to be dependent on the build environment, this
+If the source needs to be dependent on the build environment, this
 keywords supports Snapcraft's [advanced grammar](#advanced-grammar). For
-example, if you require a specific source to be used on amd64, and another for
+example, you can require a specific source to be used on amd64, and another for
 i386:
 
     - on amd64: https://my/amd64/source
@@ -904,9 +904,9 @@ A list of special attributes that affect the build of this specific part:
 
 ## Advanced grammar
 
-Several fields in the YAML support being architecture- or
-operating-system-dependent. They do so by supporting Snapcraft's advanced
-grammar. This grammar is made up of YAML lists.
+Several fields in the YAML support being dependent on the architecture or
+the operating system. They do so by supporting Snapcraft's advanced grammar.
+This grammar is made up of YAML lists.
 
 
 ### Formal definition
@@ -928,7 +928,7 @@ The body of the '`on`' clause is taken into account if every (AND, not OR)
 selector is true for the build environment. Currently the only
 selectors supported are host architectures (e.g. `amd64`).
 
-If the '`on`' clause doesn't match and it's immediately followed by an '`else`'
+If the '`on`' clause doesn't match and is immediately followed by an '`else`'
 clause, the '`else`' clause must be satisfied. An '`on`' clause without an
 '`else`' clause is considered satisfied even if no selector matched. The
 '`else fail`' form allows erroring out if an '`on`' clause was not matched.
@@ -946,7 +946,7 @@ keyword.
 
 The body of the '`try`' clause is taken into account only when all primitives
 contained within it are valid (primitive validity is determined on a
-keyword-specific basis). If they are not all valid, and it's immediately
-followed by '`else`' clauses, they are tried in order, and one of them must be
+keyword-specific basis). If they are not all valid, and are immediately
+followed by '`else`' clauses, those are tried in order, and one of them must be
 satisfied. A '`try`' clause with no '`else`' clause is considered satisfied even
 if it contains invalid primitives.
