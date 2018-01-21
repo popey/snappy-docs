@@ -143,7 +143,7 @@ snapcraft login
 
 ### Reserve a name for your snap
 
-You can publish your own version of a snap, provided you do so under a name you have rights to. You can register a name on [dashboard.snapcraft.io](https://dashboard.snapcraft.io/snaps/register/), or by running the following command:
+You can publish your own version of a snap, provided you do so under a name you have rights to. You can register a name on [dashboard.snapcraft.io](https://dashboard.snapcraft.io/register-snap/), or by running the following command:
 
 ```
 snapcraft register mysnap

@@ -15,7 +15,7 @@ You'll choose a username as part of creating your Snap Store account. This uniqu
 
 ### 2. Naming
 
-You can release a snap under any name you have rights to. Names can be registered by using the [`snapcraft register`](/build-snaps/register) command, or by visiting the [Register new snap](https://dashboard.snapcraft.io/snaps/register/) dashboard page. You can also grant other developers permission to release versions of a snap you own on the dashboard "Collaboration" page.
+You can release a snap under any name you have rights to. Names can be registered by using the [`snapcraft register`](/build-snaps/register) command, or by visiting the [Register new snap](https://dashboard.snapcraft.io/register-snap/) dashboard page. You can also grant other developers permission to release versions of a snap you own on the dashboard "Collaboration" page.
 
 ### 3. Pushing
 
