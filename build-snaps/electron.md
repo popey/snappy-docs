@@ -11,7 +11,7 @@ Compared to Mac and Windows, distributing an Electron application for Linux and 
 
 Here are some snap advantages that will benefit many Electron projects:
 
-* Simplify installation instructions, regardless of distribution, to snap install myelectronapp.
+* Simplify installation instructions, regardless of distribution, to `snap install myelectronapp`.
 * Directly control the delivery of automatic application updates.
 
 # How long will this guide take to complete?
@@ -87,7 +87,7 @@ The distribution target is then made to start the snap build. The `appId` must b
 
 You’ll first need to [install snap support](https://docs.snapcraft.io/core/install), and then install the snapcraft tool:
 ```
-sudo snap install --candidate --classic snapcraft
+sudo snap install snapcraft --classic
 ```
 
 To build Electron applications you also need Node installed, which can be downloaded from [NodeSource](https://github.com/nodesource/distributions).
@@ -105,7 +105,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install dist/electron-quick-start_1.0.0_amd64.snap --dangerous --devmode
 ```
 
-You can then try it out
+You can then try it out:
 ```
 electron-quick-start
 ```

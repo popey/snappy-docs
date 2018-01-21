@@ -104,7 +104,7 @@ If your application is intended to run as a service, add the line `daemon: simpl
 
 You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
-sudo snap install --beta --classic snapcraft
+sudo snap install snapcraft --classic
 ```
 
 If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
@@ -187,7 +187,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 
 Run the command:
 
-    youtube-dl “https://www.youtube.com/watch?v=k-laAxucmEQ”
+    youtube-dl "https://www.youtube.com/watch?v=k-laAxucmEQ"
 
 Removing the snap is simple too:
 

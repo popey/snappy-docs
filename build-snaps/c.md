@@ -11,7 +11,7 @@ Snapcraft bundles necessary libraries required by the application, and can confi
 
 Here are some snap advantages that will benefit many C/C++ projects:
 
-* Simplify installation instructions, regardless of distribution, to snap install myapp.
+* Simplify installation instructions, regardless of distribution, to `snap install myapp`.
 * Directly control the delivery of automatic application updates.
 * Bundle all the runtime requirements, including the exact versions of system libraries.
 * Extremely simple creation of services.
@@ -22,7 +22,7 @@ Typically this guide will take around 20 minutes and will result in a working C+
 
 # Getting started
 
-By way of an example, let’s take a look at how a C application can be snapped using snapcraft.
+By way of an example, let’s take a look at how a C++ application can be snapped using snapcraft.
 
 ## DOSBox Snap
 
@@ -122,7 +122,7 @@ If your application is intended to run as a service you simply add the line `dae
 
 You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
-sudo snap install --candidate --classic snapcraft
+sudo snap install snapcraft --classic
 ```
 
 If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
