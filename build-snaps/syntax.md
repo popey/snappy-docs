@@ -449,6 +449,23 @@ directory tree or a tarball or a revision control repository
           plugin: dump
           source: bar-0.1.tar
 
+As in the example, one may simply specify a string, in which case that source
+will be used regardless of the build environment.
+
+If the source needs to be dependent on the build environment, this
+keywords supports Snapcraft's [advanced grammar](#advanced-grammar). For
+example, you can require a specific source to be used on amd64, and another for
+i386:
+
+    - on amd64: https://my/amd64/source
+    - on i386: https://my/i386/source
+
+If your project requires a source that is only available for amd64, you can fail
+if you're not building on amd64:
+
+    - on amd64: https://my/amd64/source
+    - else fail
+
 ### source-type
 
 In some cases the source string is not enough to identify the version
@@ -595,13 +612,75 @@ or they are explicitly described in [`stage-packages`](#stage-packages).
           - libogg-dev
           - libvorbis-dev
 
+As in the example, one may simply specify packages in a flat list, in which case
+the packages will installed on the host regardless of the build environment.
+
+If the set of packages needs to be dependent on the build environment, this
+keywords supports Snapcraft's [advanced grammar](#advanced-grammar). For
+example, say you only wanted to install `foo` if building on amd64 (and not
+install `foo` otherwise):
+
+    - on amd64: [foo]
+
+Building on that, say you wanted to install `bar` if building on an arch other
+than amd64:
+
+    - on amd64: [foo]
+    - else: [bar]
+
+You can nest these for more complex behaviors:
+
+    - on amd64: [foo]
+    - else:
+      - on i386: [bar]
+      - on armhf: [baz]
+
+If your project requires a package that is only available on amd64, you can
+fail if you're not building on amd64:
+
+    - on amd64: [foo]
+    - else fail
+
+As another example of using the grammar, say you wanted to install `foo`, but it
+wasn't available for all architectures. Assuming your project builds without it,
+you can make it an optional build package:
+
+    - try: [foo]
+
+You can also add alternatives:
+
+    - try: [foo]
+    - else: [bar]
+
+Again, you can nest these for more complex behaviors:
+
+    - on amd64: [foo]
+    - else:
+      - try: [bar]
+
+Your packages can also depend on the target architecture:
+
+    - to armhf: [foo]
+
+Host and target architecture can also be written as a compound statement in
+one line for a specific combination:
+
+    - on amd64 to armhf: [foo]
+
+And all the same alternations work with it naturally:
+
+    - on amd64: [foo]
+    - to armhf: [bar]
+    - else:
+      - try: [baz]
+
 
 ### stage-packages
 
-A list of packages to be downloaded and unpacked to join the part
-before it's built. Note that these packages are not installed on the host.
-Like the rest of the part, all files from these packages will make it into
-the final snap unless filtered out via the [`prime`](#prime) key.
+A list of packages to be downloaded and unpacked to join the part before it's
+built. Note that these packages are not installed on the host. Like the rest of
+the part, all files from these packages will make it into the final snap unless
+filtered out via the [`prime`](#prime) key.
 
 * Type: list
 * Example:
@@ -614,32 +693,13 @@ the final snap unless filtered out via the [`prime`](#prime) key.
             - libvorbis0a
             - libvorbisfile3
 
-As in the example, One may simply specify packages in a flat list, in which case the packages
-will be fetched and unpacked regardless of build environment.
+As in the example, one may simply specify packages in a flat list, in which case
+the packages will be fetched and unpacked regardless of build environment.
 
-In addition, a specific grammar made up of sub-lists is supported here that allows one
-to filter stage packages depending on various selectors (e.g. the target
-arch), as well as specify optional packages. The grammar is made up of two
-nestable statements: '`on`' and '`try`'.
-
-Let's discuss `on`.
-
-    - on <selector>[,<selector>...]:
-      - ...
-    - else[ fail]:
-      - ...
-
-The body of the '`o`n' clause is taken into account if every (AND, not OR)
-selector is true for the target build environment. Currently the only
-selectors supported are target architectures (e.g. `amd64`).
-
-If the '`on`' clause doesn't match and it's immediately followed by an '`else`'
-clause, the '`else`' clause must be satisfied. An '`on`' clause without an
-'`else`' clause is considered satisfied even if no selector matched. The
-'`else fail`' form allows erroring out if an '`on`' clause was not matched.
-
-For example, say you only wanted to stage `foo` if building for amd64 (and
-not stage `foo` if otherwise):
+If the set of packages needs to be dependent on the build environment, this
+keywords supports Snapcraft's [advanced grammar](#advanced-grammar). For
+example, say you only wanted to stage `foo` if building on amd64 (and not stage
+`foo` otherwise):
 
     - on amd64: [foo]
 
@@ -657,7 +717,7 @@ You can nest these for more complex behaviors:
       - on armhf: [baz]
 
 If your project requires a package that is only available on amd64, you can
-fail if you're not building for amd64:
+fail if you're not building on amd64:
 
     - on amd64: [foo]
     - else fail
@@ -677,13 +737,6 @@ The same can be written on separate lines as well:
       - to armhf:
         - eggs
 
-Now let's discuss `try`:
-
-    - try:
-      - ...
-    - else:
-      - ...
-
 The body of the '`try`' clause is taken into account only when all packages
 contained within it are valid. If not, if it's immediately followed by
 '`else`' clauses they are tried in order, and one of them must be satisfied.
@@ -693,6 +746,10 @@ contains invalid packages.
 For example, say you wanted to stage `foo`, but it wasn't available for all
 architectures. Assuming your project builds without it, you can make it an
 optional stage package:
+
+As another example of using the grammar, say you wanted to stage `foo`, but it
+wasn't available for all architectures. Assuming your project builds without it,
+you can make it an optional stage package:
 
     - try: [foo]
 
@@ -885,3 +942,77 @@ A list of special attributes that affect the build of this specific part:
         foo:
           plugin: kbuild
           build-attributes: [debug, no-system-libraries]
+
+## Advanced grammar
+
+Several fields in the YAML support being dependent on the architecture or
+the operating system. They do so by supporting Snapcraft's advanced grammar.
+This grammar is made up of YAML lists.
+
+
+### Formal definition
+
+The grammar is made up of three nestable statements: '`on`', '`to`' and '`try`'.
+
+
+#### The `on` statement
+
+    - on <selector>[,<selector>...]:
+        <grammar>|<primitive>
+    - else[ fail]:
+        <grammar>|<primitive>
+
+`<primitive>` may be either a list or a scalar. The type to use depends on the
+keyword.
+
+The body of the '`on`' clause is taken into account if every (AND, not OR)
+selector is true for the build environment. Currently the only
+selectors supported are host architectures (e.g. `amd64`).
+
+If the '`on`' clause doesn't match and is immediately followed by an '`else`'
+clause, the '`else`' clause must be satisfied. An '`on`' clause without an
+'`else`' clause is considered satisfied even if no selector matched. The
+'`else fail`' form allows erroring out if an '`on`' clause was not matched.
+
+
+#### The `to` statement
+
+    - [on <selector>[,<selector>...] ]to <selector>[,<selector>...]:
+        <grammar>|<primitive>
+    - else[ fail]:
+        <grammar>|<primitive>
+
+`<primitive>` may be either a list or a scalar. The type to use depends on the
+keyword.
+
+The body of the '`to`' clause is taken into account if every (AND, not OR)
+selector is true for the target environment. Currently the only
+selectors supported are target architectures (e.g. `armhf`).
+
+If the '`to`' clause doesn't match and is immediately followed by an '`else`'
+clause, the '`else`' clause must be satisfied. A '`to`' clause without an
+'`else`' clause is considered satisfied even if no selector matched. The
+'`else fail`' form allows erroring out if a '`to`' clause was not matched.
+
+Optionally an '`on`' statement can precede a `'to'` in the same line to form
+a compound statement. Used this way, the selectors of both statements have to
+be true. That is to say, both the build environment and the target have to
+be true for the body of the clause to be taken into account.
+
+
+#### The `try` statement
+
+    - try:
+        <grammar>|<primitive>
+    - else:
+        <grammar>|<primitive>
+
+`<primitive>` may be either a list or a scalar. The type to use depends on the
+keyword.
+
+The body of the '`try`' clause is taken into account only when all primitives
+contained within it are valid (primitive validity is determined on a
+keyword-specific basis). If they are not all valid, and are immediately
+followed by '`else`' clauses, those are tried in order, and one of them must be
+satisfied. A '`try`' clause with no '`else`' clause is considered satisfied even
+if it contains invalid primitives.
