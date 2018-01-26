@@ -731,7 +731,7 @@ Or even more specifically from amd64 to armhf:
 
     - on amd64 to armhf: [eggs]
 
-The same can be written on separate lines as well:
+This can also be written on separate lines:
 
     - on amd64:
       - to armhf:
