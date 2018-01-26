@@ -658,6 +658,22 @@ Again, you can nest these for more complex behaviors:
     - else:
       - try: [bar]
 
+Your packages can also depend on the target architecture:
+
+    - to armhf: [foo]
+
+Host and target architecture can also be written as a compound statement in
+one line for a specific combination:
+
+    - on amd64 to armhf: [foo]
+
+And all the same alternations work with it naturally:
+
+    - on amd64: [foo]
+    - to armhf: [bar]
+    - else:
+      - try: [baz]
+
 
 ### stage-packages
 
@@ -705,6 +721,31 @@ fail if you're not building on amd64:
 
     - on amd64: [foo]
     - else fail
+
+If on the other hand you want a package only when building for a certain
+target architecture:
+
+    - to armhf: [spam]
+
+Or even more specifically from amd64 to armhf:
+
+    - on amd64 to armhf: [eggs]
+
+This can also be written on separate lines:
+
+    - on amd64:
+      - to armhf:
+        - eggs
+
+The body of the '`try`' clause is taken into account only when all packages
+contained within it are valid. If not, if it's immediately followed by
+'`else`' clauses they are tried in order, and one of them must be satisfied.
+A '`try`' clause with no '`else`' clause is considered satisfied even if it
+contains invalid packages.
+
+For example, say you wanted to stage `foo`, but it wasn't available for all
+architectures. Assuming your project builds without it, you can make it an
+optional stage package:
 
 As another example of using the grammar, say you wanted to stage `foo`, but it
 wasn't available for all architectures. Assuming your project builds without it,
@@ -911,7 +952,7 @@ This grammar is made up of YAML lists.
 
 ### Formal definition
 
-The grammar is made up of two nestable statements: '`on`' and '`try`'.
+The grammar is made up of three nestable statements: '`on`', '`to`' and '`try`'.
 
 
 #### The `on` statement
@@ -932,6 +973,31 @@ If the '`on`' clause doesn't match and is immediately followed by an '`else`'
 clause, the '`else`' clause must be satisfied. An '`on`' clause without an
 '`else`' clause is considered satisfied even if no selector matched. The
 '`else fail`' form allows erroring out if an '`on`' clause was not matched.
+
+
+#### The `to` statement
+
+    - [on <selector>[,<selector>...] ]to <selector>[,<selector>...]:
+        <grammar>|<primitive>
+    - else[ fail]:
+        <grammar>|<primitive>
+
+`<primitive>` may be either a list or a scalar. The type to use depends on the
+keyword.
+
+The body of the '`to`' clause is taken into account if every (AND, not OR)
+selector is true for the target environment. Currently the only
+selectors supported are target architectures (e.g. `armhf`).
+
+If the '`to`' clause doesn't match and is immediately followed by an '`else`'
+clause, the '`else`' clause must be satisfied. A '`to`' clause without an
+'`else`' clause is considered satisfied even if no selector matched. The
+'`else fail`' form allows erroring out if a '`to`' clause was not matched.
+
+Optionally an '`on`' statement can precede a `'to'` in the same line to form
+a compound statement. Used this way, the selectors of both statements have to
+be true. That is to say, both the build environment and the target have to
+be true for the body of the clause to be taken into account.
 
 
 #### The `try` statement
