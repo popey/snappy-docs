@@ -28,6 +28,7 @@ By convention at the top of the file, the following keys are consumed by the sto
   <li style="margin-bottom: 0;"><a href="#grade"><code>grade</code></a></li>
   <li style="margin-bottom: 0;"><a href="#assumes"><code>assumes</code></a></li>
   <li style="margin-bottom: 0;"><a href="#epoch"><code>epoch</code></a></li>
+  <li style="margin-bottom: 0;"><a href="#architectures"><code>architectures</code></a></li>
 </ul>
 
 ## Top-level YAML subsections
@@ -199,6 +200,12 @@ upgrade paths. For example, `0` is epoch 0; `1*` is the upgrade path from 0 to
 1; `1` is epoch 1, etc.
 
 * Type: string
+
+### architectures
+
+The architectures on which this snap runs. This defaults to the host architecture unless `--target-arch` is specified, in which case it defaults to the target architecture. One may specify multiple architectures if that's supported (for example, a 32-bit snap might run on both i386 and amd64 using `[amd64, i386]`, or a snap that is shell-only might run on all architectures, using `all`).
+
+* Type: list of strings
 
 ### apps
 
