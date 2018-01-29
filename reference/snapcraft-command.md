@@ -75,7 +75,10 @@ The <topic> can either be a plugin name or one of:
 
 For example:
 
-    $ snapcraft help cmake
+    snapcraft help cmake
+
+Will return the `cmake` plugin help:
+
     The cmake plugin is useful for building cmake based parts.
 
     These are projects that have a CMakeLists.txt that drives the build.
@@ -91,7 +94,10 @@ Initialize a snapcraft project.
 
 For example:
 
-    $ snapcraft init
+    snapcraft init
+
+Will initialize the project and return the location of your new `snapcraft.yaml`:
+
     Created snap/snapcraft.yaml.
     Edit the file to your liking or run `snapcraft` to get started
 
@@ -106,7 +112,10 @@ This command has an alias of `plugins`.
 
 For example:
 
-    $ snapcraft plugins
+    snapcraft plugins
+
+Will return the list of implemented plugins:
+
     ament      catkin-tools  dump    gulp     kernel  nil                python2  rust
     ant        cmake         go      jdk      make    nodejs             python3  scons
     autotools  copy          godeps  jhbuild  maven   plainbox-provider  qmake    tar-content
@@ -121,11 +130,11 @@ Download or retrieve the source defined for a part. The default Ubuntu repositor
 
 For example, to pull all parts:
 
-    $ snapcraft pull
-    
+    snapcraft pull
+
 To pull only specific parts:
 
-    $ snapcraft pull my-part1 my-part2
+    snapcraft pull my-part1 my-part2
 
 
 ### build
@@ -136,15 +145,15 @@ Build artifacts defined for a part. Systems capable of running parallel build jo
 
 For example, to build all parts:
 
-    $ snapcraft build
+    snapcraft build
 
 To build only specific parts:
 
-    $ snapcraft build my-part1 my-part2
-    
+    snapcraft build my-part1 my-part2
+
 To cross-compile all parts for armhf:
 
-    $ snapcraft build --target-arch=armhf
+    snapcraft build --target-arch=armhf
 
 
 ### stage
@@ -155,11 +164,11 @@ Stage the part's built/installed artifacts into the common staging area.
 
 For example, to stage all parts:
 
-    $ snapcraft stage
-    
+    snapcraft stage
+
 To stage only specific parts:
 
-    $ snapcraft stage my-part1 my-part2
+    snapcraft stage my-part1 my-part2
 
 
 ### prime
@@ -170,11 +179,11 @@ Final copy and preparation for the snap.
 
 For example, to prime all parts:
 
-    $ snapcraft prime
+    snapcraft prime
 
 To prime only specific parts:
 
-    $ snapcraft prime my-part1 my-part2
+    snapcraft prime my-part1 my-part2
 
 
 
@@ -186,11 +195,11 @@ Create a snap. The name of the snap will be `<snap name>_<architecture>.snap` un
 
 For example:
 
-    $ snapcraft snap
+    snapcraft snap
 
 To use a different name for the snap:
 
-    $ snapcraft snap --output renamed-snap.snap
+    snapcraft snap --output renamed-snap.snap
 
 
 ### pack
@@ -201,11 +210,11 @@ Create a snap from a directory holding a valid snap, defined to be containing a 
 
 For example:
 
-    $ snapcraft pack my-snap-directory
+    snapcraft pack my-snap-directory
 
 To use a different name for the snap:
 
-    $ snapcraft pack my-snap-directory --output renamed-snap.snap
+    snapcraft pack my-snap-directory --output renamed-snap.snap
 
 
 ### clean
@@ -216,15 +225,15 @@ Remove content - cleans downloads, builds or install artifacts. By default, all 
 
 For example, to completely clean all parts and lifecycle steps:
 
-    $ snapcraft clean
+    snapcraft clean
 
 To clean only the back to the build step for all parts (leaving the pull step alone):
 
-    $ snapcraft clean --step build
+    snapcraft clean --step build
 
 To clean only back to the build step for a specific part (leaving the pull step alone and not touching any other part):
 
-    $ snapcraft clean --step build my-part
+    snapcraft clean --step build my-part
 
 
 ### cleanbuild
@@ -235,7 +244,7 @@ Create a snap using a clean environment managed by LXD. This requires a properly
 
 For example:
 
-    $ snapcraft cleanbuild
+    snapcraft cleanbuild
 
 
 ### login
@@ -248,24 +257,30 @@ If you do not have an Ubuntu One account, you can create one at https://dashboar
 
 For example:
 
-    $ snapcraft login
+    snapcraft login
+
+Output:
+
     Enter your Ubuntu One e-mail address and password.
     If you do not have an Ubuntu One account, you can create one at https://dashboard.snapcraft.io/openid/login
     Email: me@example.com
-    Password: 
-    
+    Password:
+
     Login successful.
 
 To login with a file containing an exported login:
 
-    $ snapcraft login --with exported
+    snapcraft login --with exported
+
+Output:
+
     Login successful. You now have these capabilities:
 
     snaps:       No restriction
     channels:    No restriction
     permissions: ['package_upload', 'package_access', 'package_manage']
     expires:     2019-01-23T23:51:19.642295
-    
+
 
 
 ### logout
@@ -285,15 +300,15 @@ The exported login grants access to all snaps accessible from the account unless
 
 For example, to limit access to the edge channel of any snap the account can access:
 
-    $ snapcraft export-login --channels=edge exported
+    snapcraft export-login --channels=edge exported
 
 Or to limit access to only the edge channel of a single snap:
 
-    $ snapcraft export-login --snaps=my-snap --channels=edge exported
+    snapcraft export-login --snaps=my-snap --channels=edge exported
 
 To limit access to a single snap, but only until 2019:
 
-    $ snapcraft export-login --expires="2019-01-01T00:00:00" exported
+    snapcraft export-login --expires="2019-01-01T00:00:00" exported
 
 
 ### whoami
@@ -304,7 +319,7 @@ Prints information regarding the account that's currently logged in.
 
 For example:
 
-    $ snapcraft whoami
+    snapcraft whoami
     email:        me@example.com
     developer-id: 4tAgWHFEL13m9l8mSiBtBDJnnSQ2v0c9
 
@@ -319,15 +334,15 @@ By default, this command will simply create a new revision in the store and run 
 
 For example, to push a snap without releasing it:
 
-    $ snapcraft push my-snap_0.1_amd64.snap
+    snapcraft push my-snap_0.1_amd64.snap
 
 To push a snap and release it to edge:
 
-    $ snapcraft push --release edge my-snap_0.2_amd64.snap
-    
+    snapcraft push --release edge my-snap_0.2_amd64.snap
+
 To push a snap and release it to multiple channels:
 
-    $ snapcraft push --release candidate,beta my-snap_0.3_amd64.snap
+    snapcraft push --release candidate,beta my-snap_0.3_amd64.snap
 
 
 ### release
@@ -344,15 +359,15 @@ The format for channels is `[<track>/]<risk>[/<branch>]` where
 
 For example, to release revision 8 of `my-snap` into `stable`:
 
-    $ snapcraft release my-snap 8 stable
+    snapcraft release my-snap 8 stable
 
 To release revision 8 into a temporary branch:
 
-    $ snapcraft release my-snap 8 stable/my-branch
+    snapcraft release my-snap 8 stable/my-branch
 
 To release revision 8 into the stable channel of the 12 track:
 
-    $ snapcraft release my-snap 8 12/stable
+    snapcraft release my-snap 8 12/stable
 
 
 ### list-revisions
@@ -363,11 +378,11 @@ Get the history in the store for `<snap-name>`. This command has an alias of `re
 
 For example, to list all revisions of a specific snap:
 
-    $ snapcraft list-revisions my-snap
+    snapcraft list-revisions my-snap
 
 To list all armhf revisions of a specific snap:
 
-    $ snapcraft list-revisions --arch armhf my-snap
+    snapcraft list-revisions --arch armhf my-snap
 
 
 ### status
@@ -378,7 +393,7 @@ Get the status in the store for `<snap-name>`. This includes all tracks, risks, 
 
 For example, to get the status of everything for a specific snap:
 
-    $ snapcraft status snapcraft
+    snapcraft status snapcraft
     Track    Arch    Channel    Version             Revision    Expires at
     latest   amd64   stable     2.35                794
                      candidate  ^                   ^
@@ -399,7 +414,7 @@ For example, to get the status of everything for a specific snap:
 
 To get the status of only armhf:
 
-    $ snapcraft status --arch armhf snapcraft
+    snapcraft status --arch armhf snapcraft
     Track    Arch    Channel    Version             Revision    Expires at
     latest   armhf   stable     2.35                795
                      candidate  ^                   ^
@@ -415,11 +430,11 @@ Push metadata from `<snap-file>` to the store. This will error if the data in th
 
 For example:
 
-    $ snapcraft push-metadata my-snap_0.1_amd64.snap
-    
+    snapcraft push-metadata my-snap_0.1_amd64.snap
+
 To force the metadata in the snap to overwrite that in the store:
 
-    $ snapcraft push-metadata --force my-snap_0.1_amd64.snap
+    snapcraft push-metadata --force my-snap_0.1_amd64.snap
 
 
 ### close
@@ -430,11 +445,11 @@ Close `<channel>`(s) for `<snap-name>`. Closing a channel causes it to track the
 
 For example, to close the `beta` channel (thereby causing it to track the `candidate` channel):
 
-    $ snapcraft close my-snap beta
+    snapcraft close my-snap beta
 
 To close the `beta` and `edge` channels (thereby causing both of them to track the `candidate` channel):
 
-    $ snapcraft close my-snap beta edge
+    snapcraft close my-snap beta edge
 
 
 ### register
@@ -445,11 +460,11 @@ Register `<snap-name>` with the store. It will be registered to the account that
 
 For example:
 
-    $ snapcraft register my-snap-name
+    snapcraft register my-snap-name
 
 To register a private snap:
 
-    $ snapcraft register --private my-snap-name
+    snapcraft register --private my-snap-name
 
 
 ### list-registered
@@ -460,7 +475,10 @@ List snap names registered to or shared with you. This command has an alias of `
 
 For example:
 
-    $ snapcraft list-registered
+    snapcraft list-registered
+
+Will return all snap names you have access to:
+
     Name                          Since                 Visibility    Price    Notes
     my-snap1                      2016-06-22T15:46:17Z  public        -        -
     my-snap2                      2017-10-23T19:41:19Z  public        -        -
@@ -474,7 +492,7 @@ Create a key to sign assertions. Note that the key must be registered via the [`
 
 For example:
 
-    $ snapcraft create-key my-test-key
+    snapcraft create-key my-test-key
 
 
 ### register-key
@@ -485,7 +503,7 @@ Register the key named `<key-name>` with the store to sign assertions.
 
 For example:
 
-    $ snapcraft register-key my-test-key
+    snapcraft register-key my-test-key
 
 
 ### list-keys
@@ -496,10 +514,14 @@ List the keys available to sign assertions. This command has an alias of `keys`.
 
 For example:
 
-    $ snapcraft list-keys
+    snapcraft list-keys
+
+Will return keys you have already generated:
+
+````
     Name        SHA3-384 fingerprint
 *   my-test-ey  Qjd2pj0EWLWkiiZ21HuFlhkSUqd3F3Df8Oj4x9UjeG0pFL0v321cLkQNr624hROy
-
+````
 
 ### sign-build
 
@@ -509,11 +531,11 @@ Sign a built snap file and assert it using the developer's key. If there are mul
 
 For example:
 
-    $ snapcraft sign-build my-snap.snap
+    snapcraft sign-build my-snap.snap
 
 To use a specific key:
 
-    $ snapcraft sign-build --key-name my-test-key my-snap.snap
+    snapcraft sign-build --key-name my-test-key my-snap.snap
 
 
 ### update
@@ -524,8 +546,7 @@ Updates the parts listing from the cloud. Remote parts are listed and modifiable
 
 For example:
 
-    $ snapcraft update
-    Downloading parts list
+    snapcraft update
 
 
 ### search
@@ -536,7 +557,10 @@ Searches the remote parts cache for matching parts.
 
 For example:
 
-    $ snapcraft search go
+    snapcraft search go
+
+Will return all matching parts:
+
     PART NAME  DESCRIPTION
     go         Go is an open source programming language that makes it easy to build simple,
     mongodb    A document-oriented database
@@ -550,7 +574,10 @@ Shows the definition for the specified cloud part.
 
 For example:
 
-    $ snapcraft define go
+    snapcraft define go
+
+Will return the definition fro the `go` part:
+
     Maintainer: 'Leo Arias <leo.arias@canonical.com>'
     Description: Go is an open source programming language that makes it easy to build simple,
     reliable, and efficient software.
@@ -566,7 +593,7 @@ For example:
             after: [go]
           go:
             source-tag: go1.7.5
-            
+
     go:
       build: cd src && env GOROOT_BOOTSTRAP=$(go env GOROOT | tr -d '\n') ./make.bash
       build-packages:
