@@ -15,9 +15,7 @@ Using LXD, you'll map your home directory (or wherever your projects live) into 
 
 First, install LXD:
 
-       sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
-       sudo apt update
-       sudo apt install lxd
+       sudo snap install lxd
        sudo lxd init
 
 Once installed, you can either log into a new shell, or run `newgrp lxd`.
@@ -29,8 +27,7 @@ Next, create an Ubuntu 16.04 container for building snaps. We'll assume your pro
 
 Finally, install snapcraft into the container:
 
-       lxc exec snapcraft -- apt update
-       lxc exec snapcraft -- apt install snapcraft
+       lxc exec snapcraft -- snap install snapcraft --classic
 
 You're all set. Any time you want to build a snap, type the following command to run snapcraft relative to the current directory:
 
