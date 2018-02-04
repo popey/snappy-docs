@@ -35,7 +35,7 @@ This will inform you of all the steps taken during the creation of the snap.
 
 Once you have noted down all the general information about your snap
 (like description, summary information and everything else), naming
-the individual parts will define the stucture of your `snapcraft.yaml` file.
+the individual parts will define the structure of your `snapcraft.yaml` file.
 Think of parts as individual components of your snap: Where do you pull them
 from? How are they built?
 

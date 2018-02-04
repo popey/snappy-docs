@@ -37,7 +37,7 @@ Configure the laptop to be aware of the remote host. Fill in an appropriate name
 
       lxc remote add servername 1.2.3.4
 
-At this point, enter the password set in the previous step, enaling remote access. 
+At this point, enter the password set in the previous step, enabling remote access. 
 
 ### Running snapcraft
 

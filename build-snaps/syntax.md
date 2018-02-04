@@ -396,7 +396,7 @@ For Unix sockets, the file permission (e.g. `0644`).
 
 A map of part names to their own part configuration.
 
-Each part is independant from the others but you can control in which order they are processed using the [`after`](#after) key.
+Each part is independent from the others but you can control in which order they are processed using the [`after`](#after) key.
 
 * Type: YAML subsection
 * Required: yes

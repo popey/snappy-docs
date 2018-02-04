@@ -40,7 +40,7 @@ You're all set. Any time you want to build a snap, type the following command to
 
 Using Docker, you'll map the current directory into the container, then build a snap from that same directory.
 
-First, install Docker using these abridged instructions. A more compherensive guide can be found on the [Docker website](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
+First, install Docker using these abridged instructions. A more comprehensive guide can be found on the [Docker website](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
 
        echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
        sudo apt-key adv \

@@ -7,7 +7,7 @@ Snapcraft builds on top of tools like autotools, make, and cmake to create snaps
 
 # What problems do snaps solve for C/C++ applications?
 
-Snapcraft bundles necessary libraries required by the application, and can configure the environment for confinement of applications for end user peace of mind. Developers can ensure their application is delivered pre-packaged with libraries which will not be replaced or superceded by a distribution vendor.
+Snapcraft bundles necessary libraries required by the application, and can configure the environment for confinement of applications for end user peace of mind. Developers can ensure their application is delivered pre-packaged with libraries which will not be replaced or superseded by a distribution vendor.
 
 Here are some snap advantages that will benefit many C/C++ projects:
 
@@ -18,7 +18,7 @@ Here are some snap advantages that will benefit many C/C++ projects:
 
 ## How long will this guide take to complete?
 
-Typically this guide will take around 20 minutes and will result in a working C++ application in a snap. Once complete, you'll understand how to package C/C++ applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+Typically this guide will take around 20 minutes and will result in a working C++ application in a snap. Once complete, you'll understand how to package C/C++ applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delivery of updates to Linux users. 
 
 # Getting started
 

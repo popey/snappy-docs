@@ -328,7 +328,7 @@ For example:
 
 **Usage:** `snapcraft push [OPTIONS] <snap-file>`
 
-Push `<snap-file>` to the store. This operationg will block until the store finishes processing the snap. Note that the snap must first be registered to your account, see the [`register`](#register) command for more information.
+Push `<snap-file>` to the store. This operation will block until the store finishes processing the snap. Note that the snap must first be registered to your account, see the [`register`](#register) command for more information.
 
 By default, this command will simply create a new revision in the store and run the automated checks; it won't be released into any channel. One may request the snap be released into one or more channels by specifying the `--release` option with a comma-separated list of channels.
 
