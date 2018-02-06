@@ -157,12 +157,46 @@ publisher:
 description: GNU Hello prints a friendly greeting
 commands:
   - hello
-tracking:  
+tracking:
 installed: 2.10 (x1) 65kB -
 refreshed: 2016-12-23 17:03:55 +0100 CET
 ```
-
 <br>
+
+## Record a manifest of the build
+
+You can record a manifest full of details of the build, including information
+about the machine where the snap was built, what was installed on that machine
+during the build and what was installed inside the snap. Recording this
+information is useful for the users to know exactly what they are installing
+on their systems, and it is useful for you for security auditing. When there
+is a report of a new security vulnerability, you will know if it affects your
+snap by checking the manifest.
+
+To record this manifest, run snapcraft with the environment variable
+`SNAPCRAFT_BUILD_INFO=1`.
+
+After the build is done, the manifest will be recorded into the file
+`prime/snap/manifest.yaml`. After the snap is installed, it will be available
+on `/snap/<snap-name>/current/snap/manifest.yaml`.
+
+This file includes the values from the original `snapcraft.yaml`, plus the
+following annotations for each part:
+
+* `installed-packages`: The names and versions of the packages installed during the build of the part.
+* `stage-packages`: The names and versions of the packages installed inside the snap.
+* `installed-snaps`: The names and revisions of the snaps installed in the machine during the build.
+* `uname`: System information, including kernel version, operating system name and architecture.
+
+If snapcraft was executed in a container build, it will also record `image-info`,
+with the fingerprint of the container image, the architecture and the date it
+was created.
+
+In addition to this, each [plugin](/build-snaps/plugin) adds information
+specific to its build process. For example, if the plugin uses a package manager
+to install additional dependencies, the name and version of those dependencies
+will be recorded.
+
 ## More tutorials
 
 [Ubuntu Tutorials](https://tutorials.ubuntu.com/) are just like learning from pair programming except you can do it on your own.
