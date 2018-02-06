@@ -76,7 +76,7 @@ adding the right interfaces plugs to your snap declaration.
 
 You can then try to install your package in non devmode, use the `snappy-debug.security` command (from **snappy-debug**
 package) to confirm that you don’t have any `DENIALS` left, or get advice on what interfaces you may want to declare.
-Go through this iterative mode to get your confinemed snap working.
+Go through this iterative mode to get your confined snap working.
 
 ## Don’t request too many permissions
 

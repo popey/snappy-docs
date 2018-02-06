@@ -18,7 +18,7 @@ Here are some snap advantages that will benefit many projects distributing pre-b
 
 ## How long will this guide take to complete?
 
-Typically this guide will take around 20 minutes and will result in a working pre-built app in a snap. Once complete, you'll understand how to package pre-built applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+Typically this guide will take around 20 minutes and will result in a working pre-built app in a snap. Once complete, you'll understand how to package pre-built applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delivery of updates to Linux users. 
 
 ## Getting started
 

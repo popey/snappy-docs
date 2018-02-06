@@ -16,7 +16,7 @@ Here are some snap advantages that will benefit many Java projects:
 
 # How long will this guide take to complete?
 
-Typically this guide will take around 20 minutes and will result in a working Java app in a snap. Once complete, you'll understand how to package Java applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delvery of updates to Linux users. 
+Typically this guide will take around 20 minutes and will result in a working Java app in a snap. Once complete, you'll understand how to package Java applications as snaps and deliver them to millions of Linux users. After making the snap available in the store, you'll get access to installation metrics and tools to directly manage the delivery of updates to Linux users. 
 
 # Getting started
 
@@ -87,7 +87,7 @@ confinement: devmode
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have two parts, the FreePlane source, and a remote `desktop-glib-only` helper part. In other cases these can point to local directories, remote git repositories, or tarballs.
 
-The `desktop-glib-only` helper remote part will configure the runtime environment so that the application integrates well with the desktop envrionment. Other remote parts are available, and can be discovered via the `snapcraft search` command.
+The `desktop-glib-only` helper remote part will configure the runtime environment so that the application integrates well with the desktop environment. Other remote parts are available, and can be discovered via the `snapcraft search` command.
 
 The gradle plugin can build the application using standard parameters. In this case however we have overridden some gradle parameters (to disable testing, and prevent a new git tag being created), and set an appropriate `JAVA_HOME` in a `build:` script snippet. In the `install:` script snippet we're unpacking the built application into a directory which later gets incorporated into the final snap, defined by the `$SNAPCRAFT_PART_INSTALL` variable.
 

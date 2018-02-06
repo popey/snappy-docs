@@ -45,7 +45,7 @@ Launchpad will now schedule an import of your GitHub repo. This will only take a
 Finally, tell Launchpad to build and publish snaps for this repository:
 
 1. Under the "Branches" heading, click on the branch you would like to publish snaps for
-1. In a new tab or window, go to the [snap name registration page](https://dashboard.snapcraft.io/dev/snaps/register-name/), signing in with the acount you created at Launchpad
+1. In a new tab or window, go to the [snap name registration page](https://dashboard.snapcraft.io/dev/snaps/register-name/), signing in with the account you created at Launchpad
 1. Type the name of your application in the "Snap name" field, then click on the "Register and proceed to upload" button
 1. Close this tab and return to the branch page on Launchpad
 1. Under the "Related snap packages" heading, click "Create snap package"

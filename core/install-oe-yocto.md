@@ -12,7 +12,7 @@ components and define dependencies on other dependencies outside of the
 meta-snappy layer.
 
 To keep things simple we only show here how you can include meta-snappy in a
-generic Yocto build targetting the QEMU emulator. More information about how
+generic Yocto build targeting the QEMU emulator. More information about how
 to start with Yocto can be found [here](https://www.yoctoproject.org/2.2/yocto-project-qs/yocto-project-qs.html).
 
 First, setup the Yocto build environment based on the 2.2 (morty) release:
@@ -35,7 +35,7 @@ source oe-init-build-env
 ```
 
 Once that is done, we need to add the meta-snappy layer in the just created
-`conf/bblayers.conf` configuration file. Adjust the file to look like the follwoing, but replace `/path/to` with the correct absolute path to the meta-snappy repository
+`conf/bblayers.conf` configuration file. Adjust the file to look like the following, but replace `/path/to` with the correct absolute path to the meta-snappy repository
 we just cloned:
 
 ```
