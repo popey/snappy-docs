@@ -10,7 +10,6 @@ You can install the snapd package with:
 
 ```
 sudo dnf install snapd
-sudo ln -s /usr/libexec/snapd /usr/lib/
 ```
 
 Now everything is set up to get you started with snaps.
