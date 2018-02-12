@@ -73,8 +73,8 @@ EOF
 
 The `snap-confine` tool assumes that the home directory of `root` user is
 `/root`. Make sure we do not break this assumption, otherwise snaps mount
-namespace setup will fail early in the process. To use `/root/', set `ROOT_HOME`
-like this:`
+namespace setup will fail early in the process. To use `/root`, set `ROOT_HOME`
+like this:
 
 ```
 cat <<EOF >> conf/local.conf
