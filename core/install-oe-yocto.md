@@ -9,8 +9,8 @@ you by default with any binary packages, we don't do this either for snapd.
 To allow inclusion of snapd in any Linux distribution built with
 OpenEmbedded/Yocto, a so called meta-layer
 [meta-snappy](https://github.com/morphis/meta-snappy/) exists which include all
-necessary recipes. These recipes cover required components and define
-dependencies on other dependencies outside of the meta-snappy layer.
+necessary recipes. These recipes cover snapd components and define dependencies
+on the recipes and packages outside of the meta-snappy layer.
 
 To keep things simple we only show here how you can include meta-snappy in a
 generic Yocto build targeting the QEMU emulator. More information about how to
@@ -30,7 +30,7 @@ git clone https://github.com/morphis/meta-snappy.git
 ```
 
 Snaps are delivered as squashfs archive files. Support for squashfs is provided
-by meta-openembedded layer:
+by the meta-openembedded layer:
 
 ```
 cd poky
@@ -73,7 +73,7 @@ EOF
 
 The `snap-confine` tool assumes that the home directory of `root` user is
 `/root`. Make sure we do not break this assumption, otherwise snaps mount
-namespace setup will fail early in the process. To use `/root', set `ROOT_HOME`
+namespace setup will fail early in the process. To use `/root/', set `ROOT_HOME`
 like this:`
 
 ```
