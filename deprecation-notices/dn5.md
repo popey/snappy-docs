@@ -1,6 +1,6 @@
 ---
 layout: base
-title: DN2
+title: DN5
 ---
 
 **Aliases are now handled by the Snap Store, and shouldn't be placed in the snap.**
