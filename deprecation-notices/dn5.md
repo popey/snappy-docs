@@ -1,6 +1,6 @@
 ---
 layout: base
-title: DN2
+title: DN5
 ---
 
 **Aliases are now handled by the Snap Store, and shouldn't be placed in the snap.**
@@ -24,4 +24,4 @@ To get aliases in the Snap Store, the developer needs to request them and get
 approval from the developer community. This process happens in the Snapcraft
 forum; see the [request guidelines][1].
 
-[1]: https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests
+[1]: https://forum.snapcraft.io/t/process-for-aliases-auto-connections-and-tracks
