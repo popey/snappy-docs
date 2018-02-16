@@ -156,5 +156,5 @@ Want to learn more? Continue on to learn how to get your app ready for a wider a
 
 ## More information
 
-- Tutorial: [Snap a website with Electron](https://tutorials.ubuntu.com/tutorial/snap-a-website)
+- Tutorial: [Snap a website with Electron](https://tutorials.ubuntu.com/tutorial/snap-a-website?backURL=https://docs.snapcraft.io/build-snaps/electron)
 - Video: [Easily distribute Electron apps via Snap](https://www.youtube.com/watch?v=xPtPiaHIghs) (37 minutes)

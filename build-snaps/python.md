@@ -280,4 +280,4 @@ Want to learn more? Continue on to learn how to get your app ready for a wider a
 
 ## More information
 
-- Tutorial: [Snap a Python application](https://tutorials.ubuntu.com/tutorial/snap-a-python-application)
+- Tutorial: [Snap a Python application](https://tutorials.ubuntu.com/tutorial/snap-a-python-application?backURL=https://docs.snapcraft.io/build-snaps/python)
