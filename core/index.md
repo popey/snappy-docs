@@ -14,3 +14,8 @@ This section provides an overview to the key concepts and technologies that enab
 - [interfaces](/core/interfaces) to enable applications to access OS features or share features with other applications
 - [transactional updates](/core/updates) that enable snaps to be updated easily and rolled back if needed
 - [garbage collection](/core/versions) to ensure old versions of snaps are appropriately removed from devices
+
+## Tutorials
+
+- [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage)
+- [Advanced snap usage](https://tutorials.ubuntu.com/tutorial/advanced-snap-usage)
