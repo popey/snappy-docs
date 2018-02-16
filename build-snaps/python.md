@@ -277,3 +277,7 @@ Congratulations, you have an app in edge ready to share with other developers.
 
 Want to learn more? Continue on to learn how to get your app ready for a wider audience.
 -->
+
+## More information
+
+- Tutorial: [Snap a Python application](https://tutorials.ubuntu.com/tutorial/snap-a-python-application)

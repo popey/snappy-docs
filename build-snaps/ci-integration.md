@@ -16,9 +16,17 @@ Note that you should already have the following:
 - A [`.travis.yml`](https://docs.travis-ci.com/user/getting-started/) file in your project directory.
 - Travis [enabled for your repository](https://travis-ci.org/profile/) and configured to "build pushes."
 
+Travis does not currently allow open-source projects on [non-x86 architectures](https://docs.travis-ci.com/user/ci-environment/#Virtualization-environments), or builds that take longer than [50 minutes](https://docs.travis-ci.com/user/customizing-the-build#Build-Timeouts). 
+
+- Tutorial: [Continuous snap delivery from Travis CI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-travis-ci)
+
+## Using CircleCI
+
+- Tutorial: [Continuous snap delivery from CircleCI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-circle-ci)
+
 ## Using Launchpad
 
-Travis does not currently support open source projects building on [non-x86 architectures](https://docs.travis-ci.com/user/ci-environment/#Virtualization-environments) or builds that take longer than [50 minutes](https://docs.travis-ci.com/user/customizing-the-build#Build-Timeouts). Launchpad can be set up as an alternative with no restrictions placed on build time and support for the following architectures:
+Launchpad has no restrictions on build time, and can build for these architectures:
  - AMD x86-64 (amd64)
  - ARM ARMv8 (arm64)
  - ARM ARMv7 Hard Float (armhf)
