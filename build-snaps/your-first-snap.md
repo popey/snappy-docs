@@ -205,4 +205,3 @@ Recommended snap tutorials to get started:
 
 * [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
 * [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
-* [Snap a nodejs service](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
