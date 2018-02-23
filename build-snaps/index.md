@@ -5,12 +5,9 @@ title: Build snaps
 
 <iframe height="450" src="https://www.youtube.com/embed/ZsUV9xnrkTA?rel=0&showinfo=0" allowfullscreen></iframe>
 
-## Install snapcraft
+## Get Started with Snapcraft
 
-`snapcraft` is the tool to create snaps. To install it, [enable snap support](https://docs.snapcraft.io/core/install), then run:
-
-    sudo snap install snapcraft --classic
-
+Follow our [Get started with snapcraft](/build-snaps/get-started-snapcraft.md) guide to setup the perfect snapcraft environment.
 
 ## Build your first snap
 
