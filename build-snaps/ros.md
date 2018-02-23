@@ -18,6 +18,8 @@ Here are some snap advantages that will benefit many ROS projects:
 
 ## Getting started
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 Let's take a look at the talker and listener out of the ROS tutorials, and show how simple that system is to snap.
 
 ### ROS Tutorials

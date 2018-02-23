@@ -21,6 +21,8 @@ Typically this guide will take around 20 minutes and will result in a working Go
 
 ## Getting started
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 Let's take a look at httplab and go-ethereum by way of examples. Both are command line applications. httplab is a very simple example of a typical Go snap. go-ethereum (geth) requires a specific version of Go, and contains multiple commands.
 
 ### httplab
