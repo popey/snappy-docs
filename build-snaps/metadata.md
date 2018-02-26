@@ -81,7 +81,7 @@ See the [apps and commands syntax](/build-snaps/syntax#apps-and-commands) for de
 
 ### Tutorial
 
-To get a first experience with snapping a service, the ["Build a nodejs service" tutorial](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service) will guide you through building, confining and general good practices to snap a simple web server.
+To get a first experience with snapping a service, the ["Build a nodejs service" tutorial](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?backURL=https://docs.snapcraft.io/build-snaps/metadata) will guide you through building, confining and general good practices to snap a simple web server.
 
 ## Using wrappers
 

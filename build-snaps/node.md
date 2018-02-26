@@ -226,4 +226,4 @@ Want to learn more? Continue on to learn how to get your app ready for a wider a
 
 ## More information
 
-- Tutorial: [Build a nodejs service snap](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service)
+- Tutorial: [Build a nodejs service snap](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?backURL=https://docs.snapcraft.io/build-snaps/node)

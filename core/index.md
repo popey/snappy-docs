@@ -17,5 +17,5 @@ This section provides an overview to the key concepts and technologies that enab
 
 ## Tutorials
 
-- [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage)
-- [Advanced snap usage](https://tutorials.ubuntu.com/tutorial/advanced-snap-usage)
+- [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?backURL=https://docs.snapcraft.io/core/)
+- [Advanced snap usage](https://tutorials.ubuntu.com/tutorial/advanced-snap-usage?backURL=https://docs.snapcraft.io/core/)

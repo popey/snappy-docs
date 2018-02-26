@@ -18,11 +18,11 @@ Note that you should already have the following:
 
 Travis does not currently allow open-source projects on [non-x86 architectures](https://docs.travis-ci.com/user/ci-environment/#Virtualization-environments), or builds that take longer than [50 minutes](https://docs.travis-ci.com/user/customizing-the-build#Build-Timeouts). 
 
-- Tutorial: [Continuous snap delivery from Travis CI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-travis-ci)
+- Tutorial: [Continuous snap delivery from Travis CI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-travis-ci?backURL=https://docs.snapcraft.io/build-snaps/ci-integration)
 
 ## Using CircleCI
 
-- Tutorial: [Continuous snap delivery from CircleCI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-circle-ci)
+- Tutorial: [Continuous snap delivery from CircleCI](https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-circle-ci?backURL=https://docs.snapcraft.io/build-snaps/ci-integration)
 
 ## Using Launchpad
 

@@ -205,5 +205,6 @@ will be recorded.
 
 Recommended snap tutorials to get started:
 
-* [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
-* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
+* [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?backURL=https://docs.snapcraft.io/build-snaps/your-first-snap)
+* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap?backURL=https://docs.snapcraft.io/build-snaps/your-first-snap)
+
