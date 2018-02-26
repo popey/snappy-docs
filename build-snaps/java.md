@@ -20,6 +20,8 @@ Typically this guide will take around 20 minutes and will result in a working Ja
 
 # Getting started
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 By way of an example, let’s take a look at how a simple Java application can be snapped using snapcraft.
 
 ## FreePlane Snap

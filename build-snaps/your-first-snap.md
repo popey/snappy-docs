@@ -5,6 +5,8 @@ title: Build your first snap
 
 ## A single text file
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 Snapcraft uses a single text file to describe the entire build process for a snap: the `snapcraft.yaml` file.
 
 To get started with a template, you can run `snapcraft init`.

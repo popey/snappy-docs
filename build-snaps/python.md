@@ -22,6 +22,8 @@ Typically this guide will take around 20 minutes and will result in a working Py
 
 ## Getting started
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 Let's take a look at offlineimap and youtube-dl by way of examples. Both are command line applications. offlineimap uses Python 2 and only has Python module requirements. youtube-dl uses Python 3 and has system package requirements, in this case `ffmpeg`.
 
 ### offlineimap
