@@ -5,6 +5,8 @@ title: Build your first snap
 
 ## A single text file
 
+**Note:** We strongly recommend using an Ubuntu 16.04 host, VM or container for this guide. While it is possible to use newer releases of Ubuntu, or other Linux distributions, this may result in incorrect libraries being pulled into the build.
+
 Snapcraft uses a single text file to describe the entire build process for a snap: the `snapcraft.yaml` file.
 
 To get started with a template, you can run `snapcraft init`.
@@ -203,6 +205,6 @@ will be recorded.
 
 Recommended snap tutorials to get started:
 
-* [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?backURL=https://docs.snapcraft.io/build-snaps/your-first-snap)
-* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap?backURL=https://docs.snapcraft.io/build-snaps/your-first-snap)
-* [Snap a nodejs service](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?backURL=https://docs.snapcraft.io/build-snaps/your-first-snap)
+* [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage)
+* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap)
+
