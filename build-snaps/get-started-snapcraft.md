@@ -3,11 +3,11 @@ layout: base
 title: Get started with snapcraft
 ---
 
-Snapcraft is a command line tool used to build snaps. This guide details the recommended steps to ready to build snaps.
+Snapcraft is a command line tool used to build snaps. This guide details the recommended steps to get ready to build snaps.
 
-Snaps are built to run against a base snap containing a minimal common runtime environment. Currently the most popular of those is based around Ubuntu 16.04, and is called `core`. In the future there may be other base snaps built from subsequent releases, or other distributions. For now, all snaps should be built to run against the 'Series 16' core.
+Snaps are built to run against a base snap containing a minimal common runtime environment. Currently the most popular of those is based around Ubuntu 16.04, and is called `core`. In the future there may be other base snaps built from subsequent releases, or other Linux distributions. For now, all snaps should be built to run against the 'Series 16' core.
 
-It's crucial therefore that snaps are built on an Ubuntu 16.04 base machine to be fully compatible with the currently available series 16 core. 
+It's crucial therefore that snaps are built on an Ubuntu 16.04 base machine, VM or container to be fully compatible with the currently available series 16 core. 
 
 It is technically *possible* to build on a newer release of Ubuntu, or on a different Linux distribution. However this will likely result in incompatibile libraries being incorporated in the snap causing the snapped application to malfunction.
 
@@ -29,11 +29,11 @@ The best experience is generally to use a clean Ubuntu 16.04.3 LTS system or LXD
 
 ## Get snapd
 
-Snapcraft is itself available as a snap. To install snaps you need snapd. snapd is shipped by default on Ubuntu 16.04 and above. For other Linux distributions folow the relavent [install guide](/core/install).
+Snapcraft is itself available as a snap. To install snaps you need snapd. snapd is shipped by default on Ubuntu 16.04 and above. For other Linux distributions folow the relevant [install guide](/core/install).
 
 ## Get snapcraft
 
-Snapcraft installation is simple once snapd is avaialable:
+Snapcraft installation is simple once snapd is available:
 
 `snap install snapcraft --classic`
 
@@ -44,7 +44,7 @@ $ snapcraft --version
 snapcraft, version 2.39
 ```
 
-In a later step we will further confirm snapcraft capable of building spans on this environment.
+In a later step we will further confirm snapcraft capable of building snaps on this environment.
 
 ## Setup LXD
 
@@ -62,7 +62,7 @@ LXD requires that your user is in the lxd group.
 
 Logout and back in for the group change to take effect.
 
-Test that LXD (and the lxc client tools) are correctly installed by starting a container:
+Test that LXD (and the lxc client) are correctly installed by starting a container:
 
 `lxc launch ubuntu:16.04 test`
 
@@ -77,7 +77,7 @@ snapcraft init
 snapcraft cleanbuild
 ```
 
-If everything has been configured correctly the sample project will be compressed. A new ephemeral LXD container with a generated name will be created. The compressed project will be copied into the container, and snapcraft will run there to create the snap. When the process completes, the snap will be pulled from the container, and the container destroyed.
+If everything has been configured correctly the sample project will be compressed and a new ephemeral LXD container will be created. The compressed project will be copied into the container, and snapcraft will run there to create the snap. When the process completes, the snap will be pulled from the container, and the container destroyed.
 
 ```
 $ ls -1
@@ -86,7 +86,7 @@ my-snap-name_0.1_source.tar.bz2
 snap
 ```
 
-This is the most community used method for building snaps on a local workstation. A snap built this way can be installed locally or shared via the [snap store](https://dashboard.snapcraft.io/) for further testing. 
+This is the most commonly used method for building snaps on a local workstation. A snap built this way can be installed locally or shared via the [snap store](/build-snaps/publish) for further testing. 
 
 ## Next steps
 
