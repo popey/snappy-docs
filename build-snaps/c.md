@@ -78,7 +78,7 @@ description: |
 
 ### Confinement
 
-To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be released to the hidden “edge” channel where you and other developers can install them.
+To get started, we won’t [confine](/reference/confinement) this application. Unconfined applications, specified with `devmode`, can only be released to the hidden “edge” channel where you and other developers can install them.
 
 ```yaml
 confinement: devmode
@@ -88,7 +88,7 @@ confinement: devmode
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the DOSBox source release tarball. In other cases these can point to local directories, remote git repositories or other revision control systems.
 
-Before building the part the dependencies listed as `build-packages` are installed. The autotools plugin uses the standard tools, `configure` and `make` to build the part. 
+Before building the part, the dependencies listed as `build-packages` are installed. The autotools plugin uses the standard tools, `configure` and `make` to build the part. The command `snapcraft help autotools` gives more information on how this plugin works.
 
 ```yaml
 parts:
