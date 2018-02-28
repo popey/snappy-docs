@@ -7,7 +7,7 @@ title: Build snaps
 
 ## Get Started with Snapcraft
 
-Follow our [Get started with snapcraft](/build-snaps/get-started-snapcraft.md) guide to setup the perfect snapcraft environment.
+Follow our [Get started with snapcraft](/build-snaps/get-started-snapcraft) guide to setup the perfect snapcraft environment.
 
 ## Build your first snap
 
