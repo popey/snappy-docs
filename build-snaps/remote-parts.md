@@ -5,20 +5,20 @@ title: Remote parts
 
 Developers using snapcraft to build snaps can leverage pre-existing 'remote parts' in their snap, to save time re-implementing existing components.
 
-Developers who have created local parts which may be of use to others, can submit them to the remote part cache for other snapcrafter consume. 
+Developers who have created local parts which may be of use to others, can submit them to the remote part cache for other developer to consume. 
 
 ## Consuming remote parts
 
 ### Search for parts
 
-The Snapcraft command line tool can search the remote parts cache using the `search` command. Before issuing `search` use the `update` to update the parts list from the remote cache.
+The Snapcraft command line tool can search the remote parts cache using the `search` command. Before issuing `search` use the `update` command to update the parts list from the remote cache.
 
 ```
 $ snapcraft update
 Downloading parts list
 ```
 
-Once updated, `search` on its own will return the entire list of remote parts, or specify a search term to restrict the results returned.
+Once updated, `search` on its own will return the entire list of remote parts, you can specify a search term to restrict the results returned.
 
 ```
 $ snapcraft search curl
@@ -70,7 +70,7 @@ parts:
 
 #### Composing
 
-Perhaps the remote part is almost what's needed, but a change is required to fit the needs of your snap. In this case we can override pieces of the remote part. In this example we're overriding the source URL.
+Perhaps a remote part is almost the one that you need, but a change is required to fit your snap. In this case we can override pieces of the remote part. In this example we're overriding the source URL.
 
 ```
 parts:
@@ -115,11 +115,11 @@ If you've created a part which might be useful for other developers, it's possib
 
 ### Host part
 
-Create a repo containing only the part you wish to share. For example [https://github.com/sergiusens/curl](https://github.com/sergiusens/curl)contains the curl part mentioned above.
+Create a repo containing only the part you wish to share. For example [https://github.com/sergiusens/curl](https://github.com/sergiusens/curl) contains the curl part mentioned above.
 
 ### Update parts wiki
 
-Add a yaml formatted entry to the [parts wiki](https://wiki.ubuntu.com/snapcraft/parts) page. 
+Add a YAML formatted entry to the [parts wiki](https://wiki.ubuntu.com/snapcraft/parts) page. 
 
 For example the `curl` part is defined thus.
 
@@ -135,7 +135,7 @@ parts: [curl]
 ---
 ```
 
-*Note:* To edit the Ubuntu wiki you'll need an [Ubuntu SSO](https://login.ubuntu.com/) account (as used in the [snap store](https://wiki.ubuntu.com/snapcraft/parts)), and need to request to join the [ubuntu-wiki-editors](https://launchpad.net/~ubuntu-wiki-editors) team. Once approved, logout from the Ubuntu wiki and log back in again to refresh your new credentials.
+*Note:* To edit the Ubuntu wiki you'll need an [Ubuntu SSO](https://login.ubuntu.com/) account (as used in the [snap store](https://dashboard.snapcraft.io/)), and need to request to join the [ubuntu-wiki-editors](https://launchpad.net/~ubuntu-wiki-editors) team. Once approved, logout from the Ubuntu wiki and log back in again to refresh your new credentials.
 
 ### Wait for cache refresh
 
