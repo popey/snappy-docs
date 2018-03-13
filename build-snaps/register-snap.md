@@ -5,7 +5,7 @@ title: Register your snap
 
 You can push your own version of a snap, provided you do so under a name you have rights to.
 
-New snaps can be registered by:
+You can register a snap name:
 
 * in the [Snap Store dashboard](https://dashboard.snapcraft.io), by choosing **[Register Snap](https://dashboard.snapcraft.io/register-snap)**
 * at the command line, with `snapcraft register <snap name>`
