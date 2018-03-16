@@ -1,9 +1,13 @@
 .banner {
-  background: $white;
+  $navigation-border-color: lighten($color-navigation-background, 20%);
+  $navigation-hover-color: darken($color-navigation-background, 8%); // from #252525 to #111
+
+  background: $color-navigation-background;
   max-width: $site-max-width;
+  border-bottom: none;
 
   .nav-toggle {
-    background-image: url('#{$asset-server}1fd83579-navigation-menu-black.svg');
+    background-image: url('#{$asset-server}80cc6363-navigation-menu-plain.svg');
   }
 
   .logo {
@@ -21,7 +25,7 @@
       margin-left: 0;
     }
     @media only screen and (min-width: $breakpoint-medium) {
-      height: 51px;
+      height: 48px;
     }
 
     img {
@@ -31,60 +35,61 @@
   }
 
   .nav-primary {
+    ul li a {
+      &.external,
+      &.external:link,
+      &.external:link:hover {
+        background-image: none;
 
-    ul {
-      float: right;
-
-      li {
-        @media only screen and (min-width: 620px) {
-          border-bottom: 3px solid transparent;
-
-          &.active {
-            border-bottom: 3px solid #e95420;
-          }
-
-          &:hover {
-            background-color: #e3e3e3 !important;
-          }
+        &::after {
+          -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M-1-1h16v16H-1'/%3E%3Cpath fill='%23111' d='M4.867 1.313C.6 1.32.067 1.443.067 4.51v6.4c0 3.2.533 3.2 5.333 3.2h2.133c4.8 0 5.334 0 5.334-3.2v-1.6h-1.6v1.068c0 2.133 0 2.133-4.267 2.133H5.933c-4.266 0-4.266 0-4.266-2.132V5.044c0-1.93.034-2.112 3.2-2.13v-1.6z'/%3E%3Cpath d='M-1-1h16v16H-1'/%3E%3Cpath fill='%23111' d='M6.435 2.16c.11-.446 7.113-2.196 7.448-1.86.335.334-1.416 7.335-1.863 7.447-.447.112-5.697-5.14-5.586-5.586z'/%3E%3Cpath fill='%23111' d='M9.032 3.38L4.705 7.708l1.767 1.767L10.8 5.148'/%3E%3C/g%3E%3C/svg%3E") no-repeat 0 0/cover;
+          background-color: currentColor;
+          content: "";
+          margin: 0 0 0 .25em;
+          mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M-1-1h16v16H-1'/%3E%3Cpath fill='%23111' d='M4.867 1.313C.6 1.32.067 1.443.067 4.51v6.4c0 3.2.533 3.2 5.333 3.2h2.133c4.8 0 5.334 0 5.334-3.2v-1.6h-1.6v1.068c0 2.133 0 2.133-4.267 2.133H5.933c-4.266 0-4.266 0-4.266-2.132V5.044c0-1.93.034-2.112 3.2-2.13v-1.6z'/%3E%3Cpath d='M-1-1h16v16H-1'/%3E%3Cpath fill='%23111' d='M6.435 2.16c.11-.446 7.113-2.196 7.448-1.86.335.334-1.416 7.335-1.863 7.447-.447.112-5.697-5.14-5.586-5.586z'/%3E%3Cpath fill='%23111' d='M9.032 3.38L4.705 7.708l1.767 1.767L10.8 5.148'/%3E%3C/g%3E%3C/svg%3E") no-repeat 0 0/cover;
+          padding-right: .75em;
         }
+      }
+    }
 
-        // sass-lint:disable nesting-depth
-        &:last-child {
-          border-right: 1px solid #e3e3e3;
-          border-left: 1px solid #e3e3e3;
+    @media (min-width: 620px + 1) {
+      ul {
+        li {
+          border-left: 1px solid $navigation-border-color;
 
-          .docs & {
-            border-right: 0;
-            padding-right: 0;
-          }
-        }
-
-        a {
-          border: 0;
-
-          &:link,
-          &:visited {
-            background-color: transparent;
-            border: 0;
-
+          @media only screen and (min-width: 620px) {
+            &.active,
             &:hover {
-              background-color: transparent;
+              background-color: $navigation-hover-color;
             }
           }
 
-          &.external,
-          &.external:link,
-          &.external:link:hover {
-            color: $cool-grey;
-            background-image: url('#{$asset-server}7d47725b-external-link.svg');
-            background-position: right 1rem top 1rem;
-            background-size: 7px 7px;
-            background-repeat: no-repeat;
-            background-color: transparent;
-            padding-right: 2rem;
+          // sass-lint:disable nesting-depth
+          &:last-child {
+            border-right: 1px solid $navigation-border-color;
+            border-left: 1px solid $navigation-border-color;
           }
 
-          // sass-lint:enable nesting-depth
+          a {
+            border: none;
+            color: $white;
+
+            &:link,
+            &:visited {
+              padding: {
+                left: 1.25rem;
+                right: 1.25rem;
+              }
+              border: none;
+              color: $white;
+            }
+
+            &:hover,
+            &:link:hover {
+              background: transparent;
+            }
+            // sass-lint:enable nesting-depth
+          }
         }
       }
     }
