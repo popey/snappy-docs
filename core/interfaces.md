@@ -18,8 +18,8 @@ exposes the ``network`` slot and all applications that can talk over the
 network connect their plugs there.
 
 The availability of an interface depends on a number of factors and may be
-may be provided by the core snap or via snaps providing the slot.  The
-available interfaces on a given system can be seen with ``snap interfaces``.
+provided by the core snap or via snaps providing the slot.  The available
+interfaces on a given system can be seen with ``snap interfaces``.
 
 ## Supported Interfaces
 
