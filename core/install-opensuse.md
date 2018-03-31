@@ -12,12 +12,12 @@ process for both is similar. First we need to add the repository itself.
 For 42.2:
 
 ```
-sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
+sudo zypper addrepo --refresh http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
 ```
 For Tumbleweed:
 
 ```
-sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Tumbleweed/ snappy
+sudo zypper addrepo --refresh http://download.opensuse.org/repositories/system:/snappy/openSUSE_Tumbleweed/ snappy
 ```
 
 You can then install snapd:
