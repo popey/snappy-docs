@@ -3,17 +3,7 @@ layout: base
 title: Scriptlets
 ---
 
-Scriptlets are shell scripts sourced directly from your `snapcraft.yaml`, to change the behaviour of a plugin.
-
-## Overview
-
- * Scriptlets can be triggered before [the "build" step of a plugin](/build-snaps/plugins), instead of it and after.
-
- * They are declared inside parts, using the following keywords: `prepare`, `build` and `install`.
-
-  * Their working directory is the base build directory of the part (`/parts/<part name>/build`) and they are executed with `/bin/sh`.
-
-### Syntax
+Scriptlets are shell scripts sourced directly from your `snapcraft.yaml`, to change the behaviour of a plugin as it builds its part. Each step of the part's lifecycle (pull, build, stage, and prime) can be customised.
 
 Scriptlets are declared with the following syntax:
 
@@ -29,108 +19,81 @@ You can use a pipe on the first line to declare a multi-line script:
           <multi-line>
           <shell script>
 
-## "prepare"
+## Overriding the `pull` step
 
-The `prepare` scriptlet is triggered between the pull and the build step of a plugin. It allows you to run commands on the source of a part before building it.
+This can be done by utilising the `override-pull` scriptlet. Its working directory is the part's source directory in `parts/<part name>/src/`. In order to run the default `pull` step, call `snapcraftctl pull` from within the scriptlet.
+
 
 ### Example
 
-#### snapcraft.yaml
+Let's say you want to patch the source code of the part you're pulling:
 
 ```
-name: test
-version: 1
-summary: test
-description: test
-
 parts:
   foo:
-    source: .
     plugin: dump
-    prepare: |
-      echo "test" > testfile
-      cp testfile testfile2
+    # ...
+    override-pull: |
+      snapcraftctl pull
+      patch -p1 < $SNAPCRAFT_STAGE/my.patch
 ```
 
-When you run `snapcraft` on this example, you can see that the final snap (content of the `prime` directory) contains the `testfile` and `testfile2` files with our "test" string inside.
 
-Here is the order of operations, the plugin:
+## Overriding the `build` step
 
- * installs all the required dependencies
- * pulls a local `source` ("`.`" means all the content of the project directory)
- * runs the `prepare` script:
+This can be done by utilising the `override-build` scriptlet. Its working directory is the part's base build directory in `parts/<part name>/build/`. In order to run the default `build` step, call `snapcraftctl build` from within the scriptlet.
 
-       echo "test" > testfile
-       cp testfile testfile2
-
- * Builds the part using the plugin's build system
-
-## "build"
-
-The `build` scriptlet replaces the build step of a plugin.
-
-In some cases, default plugins don't offer enough flexibility to build your application (specific env variables, custom build systems...), the `build` scriptlet gives you complete freedom to override the plugin's build behaviour.
 
 ### Example
 
-#### snapcraft.yaml
+Let's say the default build/install process ends up installing files with absolute paths in them, which need to be fixed up to look inside the snap:
 
 ```
-name: test
-version: 1
-summary: test
-description: test
-
 parts:
   foo:
-    source: .
-    plugin: python
-    python-version: "python3"
-    build: |
-      cd scripts
-      python3 build_dev.py
+    plugin: dump
+    # ...
+    override-build: |
+      snapcraftctl build
+      sed -i 's|/usr/bin|$SNAP/usr/bin|g' $SNAPCRAFT_PART_INSTALL/my-bin-artifact.sh
 ```
 
-Here is the order of operations, the plugin:
 
- * installs all the required dependencies
- * pulls a local `source` ("`.`" means all the content of the project directory)
- * runs the `build` script:
+# Overriding the `stage` step
 
-       cd scripts
-       python3 build_dev.py
+This can be done by utilising the `override-stage` scriptlet. Its working directory is the staging area in `stage/`. In order to run the default `stage` step, call `snapcraftctl stage` from within the scriptlet.
 
-## "install"
-
-The `install` scriptlet is triggered after the build step of a plugin.
 
 ### Example
 
-#### snapcraft.yaml
+Let's say you wanted to tweak a file installed by another part:
 
 ```
-name: test
-version: 1
-summary: test
-description: test
-
 parts:
   foo:
-    source: .
-    plugin: autotools
-    install: |
-      sed -i 's|/usr/bin|$SNAP/usr/bin|g' my-bin-artifact.sh
-      mv my-bin-artifact.sh $SNAPCRAFT_PART_INSTALL/bin/my-bin-build.sh
+    plugin: dump
+    # ...
+    after: [other-part]
+    override-stage: |
+      snapcraftctl stage
+      sed -i 's|/usr/bin|$SNAP/usr/bin|g' other/parts/file
 ```
 
-Here is the order of operations, the plugin:
 
- * installs all the required dependencies
- * pulls a local `source` ("`.`" means all the content of the project directory)
- * runs the build step (in this case, the autotools plugin will run: `./configure`, `make`, `make install`)
- * runs the `install` script: :
+# Overriding the `prime` step
 
-       sed -i 's|/usr/bin|$SNAP/usr/bin|g' my-bin-artifact.sh
-       mv my-bin-artifact.sh $SNAPCRAFT_PART_INSTALL/bin/my-bin-build.sh
+This can be done by utilising the `override-prime` scriptlet. Its working directory is the primeing area in `prime/`. In order to run the default `prime` step, call `snapcraftctl prime` from within the scriptlet.
 
-   `$SNAPCRAFT_PART_INSTALL` being where snapcraft moves the build to when the build step finishes.
+
+### Example
+
+Let's say you wanted to compile gsetting schemas for the entire priming area
+
+```
+parts:
+  foo:
+    plugin: nil
+    after: [all, other, parts]
+    override-prime: |
+      glib-compile-schemas usr/share/glib-2.0/schemas
+```
