@@ -33,5 +33,4 @@ The snapcraft source code provides snap demos for a [wide range of project types
 Recommended snap tutorials to get started:
 
 * [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?backURL=https://docs.snapcraft.io/build-snaps/&utm_source=snapcraft.io&utm_medium=buildsnapsindex&utm_campaign=tutorials)
-* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-your-first-snap?backURL=https://docs.snapcraft.io/build-snaps/&utm_source=snapcraft.io&utm_medium=buildsnapsindex&utm_campaign=tutorials)
 * [Snap a nodejs service](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?backURL=https://docs.snapcraft.io/build-snaps/&utm_source=snapcraft.io&utm_medium=buildsnapsindex&utm_campaign=tutorials)
