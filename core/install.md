@@ -20,4 +20,5 @@ instructions for each of these distributions.
  * [openSUSE](install-opensuse)
  * [OpenWrt](install-openwrt)
  * [Solus](install-solus)
+ * [Raspbian](install-raspbian)
  * [Ubuntu](install-ubuntu)
