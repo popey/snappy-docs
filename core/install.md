@@ -11,6 +11,7 @@ instructions for each of these distributions.
 
  * [Arch Linux](install-arch-linux)
  * [Debian](install-debian)
+ * [elementary OS](install-elementary-os)
  * [Fedora](install-fedora)
  * [Gentoo](install-gentoo)
  * [Linux Mint](install-linux-mint)
