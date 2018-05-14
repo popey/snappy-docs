@@ -122,6 +122,16 @@ The version of the resulting snap.
 
       version: 1.2.3+git
 
+### version-script
+
+A script to return the current version of the resulting snap.
+
+* Type: string
+* Required: no
+* Example:
+
+      version-script: cat version
+
 ### summary
 
 A 78 characters max sentence to present your snap.
