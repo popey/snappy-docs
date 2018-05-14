@@ -9,7 +9,7 @@ Snaps are built to run against a base snap containing a minimal common runtime e
 
 It's crucial therefore that snaps are built on an Ubuntu 16.04 base machine, VM or container to be fully compatible with the currently available series 16 core. 
 
-It is technically *possible* to build on a newer release of Ubuntu, or on a different Linux distribution. However this will likely result in incompatibile libraries being incorporated in the snap causing the snapped application to malfunction.
+It is technically *possible* to build on a newer release of Ubuntu, or on a different Linux distribution. However this will likely result in incompatible libraries being incorporated in the snap causing the snapped application to malfunction.
 
 ## Development platform
 
