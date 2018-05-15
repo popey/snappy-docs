@@ -53,4 +53,4 @@ Next, make sure Docker is running:
 You're all set. Any time you want to build a snap, type the following commands to run snapcraft relative to the current directory:
 
        sudo docker pull snapcore/snapcraft
-       sudo docker run -it -v $PWD:$PWD -w $PWD snapcore/snapcraft snapcraft
+       sudo docker run -it -v "$PWD:$PWD" -w "$PWD" snapcore/snapcraft snapcraft
