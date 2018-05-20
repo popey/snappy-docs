@@ -194,7 +194,7 @@ If snapcraft was executed in a container build, it will also record `image-info`
 with the fingerprint of the container image, the architecture and the date it
 was created.
 
-In addition to this, each [plugin](/build-snaps/plugin) adds information
+In addition to this, each [plugin](/build-snaps/plugins) adds information
 specific to its build process. For example, if the plugin uses a package manager
 to install additional dependencies, the name and version of those dependencies
 will be recorded.
