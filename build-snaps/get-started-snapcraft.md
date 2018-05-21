@@ -58,7 +58,7 @@ Configuration of the LXD defaults can be done via the `init` option. Typically a
 
 LXD requires that your user is in the lxd group. 
 
-`sudo usermod -g lxd ${USER}`
+`sudo usermod -aG lxd ${USER}`
 
 Logout and back in for the group change to take effect.
 
