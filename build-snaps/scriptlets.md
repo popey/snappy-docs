@@ -59,7 +59,7 @@ parts:
 ```
 
 
-# Overriding the `stage` step
+## Overriding the `stage` step
 
 This can be done by utilising the `override-stage` scriptlet. Its working directory is the staging area in `stage/`. In order to run the default `stage` step, call `snapcraftctl stage` from within the scriptlet.
 
@@ -80,7 +80,7 @@ parts:
 ```
 
 
-# Overriding the `prime` step
+## Overriding the `prime` step
 
 This can be done by utilising the `override-prime` scriptlet. Its working directory is the primeing area in `prime/`. In order to run the default `prime` step, call `snapcraftctl prime` from within the scriptlet.
 

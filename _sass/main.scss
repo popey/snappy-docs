@@ -34,3 +34,9 @@ $color-link:       #007aa6;
     color: inherit;
   }
 }
+
+// This fixes https://github.com/canonical-docs/snappy-docs/issues/393
+// When code elements are within a heading, the font-size should be inherited.
+code {
+  font-size: inherit;
+}
