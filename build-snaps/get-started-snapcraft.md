@@ -55,13 +55,13 @@ LXD installation on Ubuntu is quite straightforward:
 LXD requires that your user is in the lxd group. 
 
 ```
-sudo usermod -g lxd ${USER}
+sudo usermod -aG lxd ${USER}
 newgrp lxd
 ```
 
 Configuration of the LXD defaults can be done via the `init` option. Typically accepting the default prompts is sufficient to get a working LXD configuration, usable by snapcraft on the same host:
 
-`sudo lxd init`
+`lxd init`
 
 Test that LXD (and the lxc client) are correctly installed by starting a container:
 
