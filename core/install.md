@@ -19,6 +19,7 @@ instructions for each of these distributions.
  * [OpenEmbedded/Yocto](install-oe-yocto)
  * [openSUSE](install-opensuse)
  * [OpenWrt](install-openwrt)
+ * [Pop!\_OS](install-pop-os)
  * [Solus](install-solus)
  * [Raspbian](install-raspbian)
  * [Ubuntu](install-ubuntu)
